@@ -1,0 +1,57 @@
+
+/* ============================================
+   BOUTONS
+   ============================================ */
+
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    
+    transition: all 0.3s ease;
+    
+    font-family: inherit;
+}
+
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2D4AA3;
+    transform: translateY(-2px);
+}
+
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+/* ============================================
+   LOGO
+   ============================================ */
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.logo-accent {
+    color: var(--color-primary);
+    font-weight: 400;
+}
