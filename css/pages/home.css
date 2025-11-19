@@ -1,0 +1,456 @@
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+   
+.navbar {
+    background-color: var(--bg-white);
+    padding: var(--space-sm) 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    display: inline-block;
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--space-lg);
+}
+
+.nav-links a {
+    color: var(--text-gray);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);
+}
+
+.profile-badge {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    background-color: var(--bg-gray);
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+}
+
+.profile-badge span {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.profile-badge button {
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    font-weight: 600;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-family: inherit;
+}
+
+.profile-badge button:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+/* ============================================
+   TOUTES LES SECTIONS
+   ============================================ */
+   
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: var(--space-xl) 0;
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--bg-light) 0%, #EEF2FF 100%);
+}
+
+.checklist-preview,
+.vocabulaire {
+    background-color: var(--bg-white);
+}
+
+.readme-preview,
+.entretien {
+    background-color: var(--bg-light);
+}
+
+/* ============================================
+   SECTION HERO
+   ============================================ */
+
+.hero .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-xl);
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ============================================
+   STRUCTURE SECTIONS
+   ============================================ */
+
+.section-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-xl);
+}
+
+.section-text,
+.section-image {
+    flex: 1;
+}
+
+.section-content .reverse {
+    flex-direction: row-reverse;
+}
+
+.section-text h2 {
+    font-size: 2rem;
+    margin-bottom: var(--space-sm);
+}
+
+.section-text p {
+    font-size: 1.125rem;
+    margin-bottom: var(--space-md);
+}
+
+/* ============================================
+   PLACEHOLDERS TEMPORAIRES
+   ============================================ */
+
+.placeholder-image {
+    background-color: var(--bg-gray);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    text-align: center;
+    color: var(--text-light);
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+/* ============================================
+   CERCLE DE PROGRESSION
+   ============================================ */
+
+.progress-circle {
+    width: 120px;
+    height: 120px;
+    border: 6px solid var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: var(--space-md) 0;
+}
+
+/* ============================================
+   SECTION VOCABULAIRE
+   ============================================ */
+
+.vocabulaire .container {
+    text-align: center;
+}
+
+.vocabulaire h2 {
+    font-size: 2rem;
+    margin-bottom: var(--space-xl);
+}
+
+.vocab-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.vocab-card {
+    background-color: var(--bg-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.vocab-card:hover {
+    transform: translateY(-8px);
+}
+
+.vocab-icon {
+    margin-bottom: var(--space-md);
+}
+
+.placeholder-image.small {
+    min-height: 80px;
+    width: 80px;
+    margin: 0 auto;
+    font-size: 0.75rem;
+}
+
+.vocab-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-sm);
+}
+
+.vocab-card p {
+    margin-bottom: var(--space-md);
+}
+
+/* ============================================
+   SECTION ENTRETIEN
+   ============================================ */
+
+.entretien .container {
+    text-align: center;
+}
+
+.entretien-header {
+    margin-bottom: var(--space-xl);
+}
+
+.entretien-header h2 {
+    font-size: 2rem;
+    margin-bottom: var(--space-sm);
+}
+
+.entretien-header p {
+    font-size: 1.125rem;
+    color: var(--text-gray);
+}
+
+.entretien-scene {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto var(--space-lg);
+}
+
+.dialogue-bubbles {
+    display: flex;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-lg);
+}
+
+.bubble {
+    flex: 1;
+    background-color: var(--bg-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    min-height: 150px;
+}
+
+.bubble-question {
+    background-color: #EEF2FF;
+    text-align: left;
+}
+
+/* Petite flèche en bas de la bulle question */
+.bubble-question::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #EEF2FF;
+}
+
+.bubble-answer {
+    background-color: #F0FDF4;
+    text-align: left;
+}
+
+/* Petite flèche en bas de la bulle réponse */
+.bubble-answer::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    right: 50px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #F0FDF4;
+}
+
+.bubble p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.bubble p:first-child {
+    margin-bottom: var(--space-sm);
+}
+
+.bubble strong {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+}
+
+/* Illustration en dessous */
+.entretien-illustration {
+    margin-top: var(--space-xl);
+}
+
+/* Contrôles (boutons + compteur) */
+.entretien-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+#questionCounter {
+    font-weight: 600;
+    color: var(--text-gray);
+}
+
+/* ============================================
+   SECTION CONCLUSION
+   ============================================ */
+
+.conclusion {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: white;
+    text-align: center;
+}
+
+.conclusion h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: var(--space-sm);
+}
+
+.conclusion p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.125rem;
+    margin-bottom: var(--space-md);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+    background-color: var(--text-dark);
+    color: var(--bg-light);
+    padding: var(--space-lg) 0;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: var(--bg-light);
+    font-size: 0.875rem;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-copyright {
+    font-size: 0.875rem;
+    color: var(--text-light);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* Sections */
+    section {
+        min-height: auto;
+        padding: var(--space-lg) 0;
+    }
+    
+    /* Navbar */
+    .nav-links {
+        display: none;
+    }
+    
+    /* Hero et sections */
+    .hero .container,
+    .section-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    /* Annuler l'ordre inversé */
+    .section-content.reverse .section-image,
+    .section-content.reverse .section-text {
+        order: 0;
+    }
+    
+    /* Bulles */
+    .dialogue-bubbles {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Vocabulaire */
+    .vocab-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Titres */
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevPath Junior - Décroche ton premier job de développeur</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/home.css">
+
+    <script defer src="js/main.js"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+
+                <a href="index.html" class="logo">
+                    <span class="logo-text">DevPath <span class="logo-accent">Junior</span></span>
+                </a>
+
+                <ul class="nav-links">
+                    <li><a href="pages/checklist.html">Checklist</a></li>
+                    <li><a href="pages/readme.html">README</a></li>
+                    <li><a href="pages/flashcards.html">Vocabulaire</a></li>
+                    <li><a href="#entretien">Entretien</a></li>
+                </ul>
+
+                <div class="profile-badge" id="profileBadge" style="display: none;">
+                    <span id="profileName">Frontend</span>
+                    <button id="changeProfile">Changer</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- SECTION HERO -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Décroche ton premier job de développeur web</h1>
+                    <p>Un parcours structuré pour te préparer efficacement aux entretiens et décrocher ton premier
+                        emploi</p>
+                    <a href="#checklist" class="btn btn-primary">Commencer mon parcours</a>
+                </div>
+                <div class="hero-image">
+                    <div class="placeholder-image">Illustration Hero</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION CHECKLIST -->
+        <section class="checklist-preview" id="checklist">
+            <div class="container">
+                <div class="section-content">
+                    <div class="section-image">
+                        <div class="placeholder-image">Illustration Checklist</div>
+                    </div>
+
+                    <div class="section-text">
+                        <h2>Suis ta progression</h2>
+                        <p>Une checklist complète pour ne rien oublier dans ta préparation</p>
+
+                        <div class="progress-circle">
+                            <span id="progressPercentage">0%</span>
+                        </div>
+
+                        <a href="pages/checklist.html" class="btn btn-primary">Voir ma checklist complète</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION README -->
+        <section class="readme-preview">
+            <div class="container">
+                <div class="section-content reverse">
+                    <div class="section-text">
+                        <h2>Crée un README professionnel</h2>
+                        <p>Génère un README GitHub qui met en valeur ton profil</p>
+                        <a href="pages/readme.html" class="btn btn-primary">Créer mon README</a>
+                    </div>
+
+                    <div class="section-image">
+                        <div class="placeholder-image">Illustration README</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION VOCABULAIRE -->
+        <section class="vocabulaire">
+            <div class="container">
+                <h2>Maîtrise le vocabulaire technique</h2>
+
+                <div class="vocab-cards">
+                    <!-- Carte Flashcards -->
+                    <div class="vocab-card">
+                        <div class="vocab-icon">
+                            <div class="placeholder-image small">Icône Flashcards</div>
+                        </div>
+                        <h3>Flashcards</h3>
+                        <p>Apprends et révise les termes techniques essentiels</p>
+                        <a href="pages/flashcards.html" class="btn btn-primary">Commencer</a>
+                    </div>
+
+                    <!-- Carte Speed Challenge -->
+                    <div class="vocab-card">
+                        <div class="vocab-icon">
+                            <div class="placeholder-image small">Icône Quiz</div>
+                        </div>
+                        <h3>Speed Challenge</h3>
+                        <p>Teste tes connaissances en 10 secondes par question</p>
+                        <a href="pages/speed-challenge.html" class="btn btn-primary">Jouer</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION ENTRETIEN -->
+        <section class="entretien" id="entretien">
+            <div class="container">
+                <div class="entretien-header">
+                    <h2>Prépare-toi aux entretiens</h2>
+                    <p>Entraîne-toi avec des questions fréquentes adaptées à ton profil</p>
+                </div>
+
+                <div class="entretien-scene">
+
+                    <div class="dialogue-bubbles">
+
+                        <div class="bubble bubble-question">
+                            <p><strong>Recruteur :</strong></p>
+                            <p id="questionText">Parle-moi de ton dernier projet</p>
+                        </div>
+
+                        <div class="bubble bubble-answer">
+                            <p><strong>Toi :</strong></p>
+                            <p id="answerText">J'ai développé une application de gestion de tâches en React avec une API
+                                Node.js</p>
+                        </div>
+                    </div>
+
+                    <div class="entretien-illustration">
+                        <div class="placeholder-image">Illustration Entretien (2 personnages)</div>
+                    </div>
+
+                </div>
+
+                <div class="entretien-controls">
+                    <button class="btn btn-secondary" id="prevQuestion">← Question précédente</button>
+                    <span id="questionCounter">Question 1/5</span>
+                    <button class="btn btn-primary" id="nextQuestion">Question suivante →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION CONCLUSION -->
+        <section class="conclusion">
+            <div class="container">
+                <h2>Et maintenant, décroche ton job ! 🚀</h2>
+                <p>Tu as tous les outils en main. Fonce !</p>
+                <a href="#" class="btn btn-secondary">Retour en haut</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+
+                <div class="footer-links">
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Conditions d'utilisation</a>
+                    <a href="#">Paramètres des cookies</a>
+                </div>
+
+                <p class="footer-copyright">© 2025 DevPath Junior. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
