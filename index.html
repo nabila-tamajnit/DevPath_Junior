@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/pages/home.css">
 
     <script defer src="js/main.js"></script>
+    <script defer src="js/navbar.js"></script>
 </head>
 
 <body>
@@ -19,21 +20,33 @@
     <nav class="navbar">
         <div class="container">
             <div class="navbar-content">
-
+                <!-- Logo -->
                 <a href="index.html" class="logo">
                     <span class="logo-text">DevPath <span class="logo-accent">Junior</span></span>
                 </a>
 
-                <ul class="nav-links">
-                    <li><a href="pages/checklist.html">Checklist</a></li>
-                    <li><a href="pages/readme.html">README</a></li>
-                    <li><a href="pages/flashcards.html">Vocabulaire</a></li>
-                    <li><a href="#entretien">Entretien</a></li>
-                </ul>
+                <!-- Bouton burger (visible seulement sur mobile) -->
+                <button class="burger-btn" id="burgerBtn" aria-label="Menu">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </button>
 
-                <div class="profile-badge" id="profileBadge" style="display: none;">
-                    <span id="profileName">Frontend</span>
-                    <button id="changeProfile">Changer</button>
+                <!-- Menu de navigation (caché sur mobile par défaut) -->
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="pages/checklist.html">Checklist</a></li>
+                        <li><a href="pages/readme.html">README</a></li>
+                        <li><a href="#vocabulaire">Vocabulaire</a></li>
+                        <li><a href="#entretien">Entretien</a></li>
+                    </ul>
+
+                    <!-- Badge de profil -->
+                    <div class="profile-badge" id="profileBadge">
+                        <span id="profileName">Frontend</span>
+                        <button id="changeProfile">Changer</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -48,10 +61,79 @@
                     <h1>Décroche ton premier job de développeur web</h1>
                     <p>Un parcours structuré pour te préparer efficacement aux entretiens et décrocher ton premier
                         emploi</p>
-                    <a href="#checklist" class="btn btn-primary">Commencer mon parcours</a>
+                    <a href="#timeline" class="btn btn-primary">Commencer mon parcours</a>
                 </div>
                 <div class="hero-image">
-                    <div class="placeholder-image">Illustration Hero</div>
+                    <img src="images/hero-illustration.svg" alt="Illustration développeur">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION TIMELINE -->
+        <section class="timeline" id="timeline">
+            <div class="container">
+                <h2>Les 5 étapes pour décrocher ton job</h2>
+                <p class="timeline-subtitle">Un parcours structuré pour te préparer efficacement</p>
+
+                <div class="timeline-steps">
+
+                    <!-- Étape 1 -->
+                    <a href="#checklist" class="timeline-step">
+                        <div class="step-circle">
+                            <img src="images/Icons/icon-checklist.png" alt="Checklist" class="step-icon">
+                            <div class="step-number">01</div>
+                        </div>
+                        <h3>Organise ton parcours</h3>
+                        <p>Complète ta checklist : Portfolio, GitHub, LinkedIn,...</p>
+                    </a>
+                    <div class="timeline-line"></div>
+
+                    <!-- Étape 2 -->
+                    <a href="#readme" class="timeline-step">
+                        <div class="step-circle" href="#readme">
+                            <img src="images/Icons/icon-readme.png" alt="Profil" class="step-icon">
+                            <div class="step-number">02</div>
+                        </div>
+                        <h3>Construis ton profil</h3>
+                        <p>Crée un README professionnel sur GitHub</p>
+                    </a>
+
+                    <div class="timeline-line"></div>
+
+                    <!-- Étape 3 -->
+                    <a href="#vocabulaire" class="timeline-step">
+                        <div class="step-circle">
+                            <img src="images/Icons/icon-vocabulary.png" alt="Vocabulaire" class="step-icon">
+                            <div class="step-number">03</div>
+                        </div>
+                        <h3>Maîtrise le vocabulaire</h3>
+                        <p>Révise les termes essentiels du développement web</p>
+                    </a>
+
+                    <div class="timeline-line"></div>
+
+                    <!-- Étape 4 -->
+                    <a href="#entretien" class="timeline-step">
+                        <div class="step-circle">
+                            <img src="images/Icons/icon-interview.png" alt="Entretien" class="step-icon">
+                            <div class="step-number">04</div>
+                        </div>
+                        <h3>Prépare tes entretiens</h3>
+                        <p>Entraîne-toi avec 30 questions d'entretien</p>
+                    </a>
+
+                    <div class="timeline-line"></div>
+
+                    <!-- Étape 5 -->
+                    <a href="#conclusion" class="timeline-step">
+                        <div class="step-circle">
+                            <img src="images/Icons/icon-success.png" alt="Succès" class="step-icon">
+                            <div class="step-number">05</div>
+                        </div>
+                        <h3>Décroche ton job</h3>
+                        <p>Valide ta checklist de préparation et postule aux offres ciblées</p>
+                    </a>
+
                 </div>
             </div>
         </section>
@@ -61,7 +143,7 @@
             <div class="container">
                 <div class="section-content">
                     <div class="section-image">
-                        <div class="placeholder-image">Illustration Checklist</div>
+                        <img src="images/checklist-illustration(3).svg" alt="Illustration checklist">
                     </div>
 
                     <div class="section-text">
@@ -72,14 +154,14 @@
                             <span id="progressPercentage">0%</span>
                         </div>
 
-                        <a href="pages/checklist.html" class="btn btn-primary">Voir ma checklist complète</a>
+                        <a href="pages/checklist.html" class="btn btn-primary">Voir ma checklist</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- SECTION README -->
-        <section class="readme-preview">
+        <section class="readme-preview" id="readme">
             <div class="container">
                 <div class="section-content reverse">
                     <div class="section-text">
@@ -89,14 +171,14 @@
                     </div>
 
                     <div class="section-image">
-                        <div class="placeholder-image">Illustration README</div>
+                        <img src="images/readme-illustration(3).svg" alt="Illustration README">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- SECTION VOCABULAIRE -->
-        <section class="vocabulaire">
+        <section class="vocabulaire" id="vocabulaire">
             <div class="container">
                 <h2>Maîtrise le vocabulaire technique</h2>
 
@@ -104,7 +186,7 @@
                     <!-- Carte Flashcards -->
                     <div class="vocab-card">
                         <div class="vocab-icon">
-                            <div class="placeholder-image small">Icône Flashcards</div>
+                            <img src="images/flashcards-illustration.svg" alt="Icône flashcards">
                         </div>
                         <h3>Flashcards</h3>
                         <p>Apprends et révise les termes techniques essentiels</p>
@@ -114,7 +196,7 @@
                     <!-- Carte Speed Challenge -->
                     <div class="vocab-card">
                         <div class="vocab-icon">
-                            <div class="placeholder-image small">Icône Quiz</div>
+                            <img src="images/speed_challenge-illustration.svg" alt="Icône speed challenge">
                         </div>
                         <h3>Speed Challenge</h3>
                         <p>Teste tes connaissances en 10 secondes par question</p>
@@ -149,7 +231,7 @@
                     </div>
 
                     <div class="entretien-illustration">
-                        <div class="placeholder-image">Illustration Entretien (2 personnages)</div>
+                        <img src="images/entretien-illustration.svg" alt="Illustration entretien">
                     </div>
 
                 </div>
@@ -163,7 +245,7 @@
         </section>
 
         <!-- SECTION CONCLUSION -->
-        <section class="conclusion">
+        <section class="conclusion" id="conclusion">
             <div class="container">
                 <h2>Et maintenant, décroche ton job ! 🚀</h2>
                 <p>Tu as tous les outils en main. Fonce !</p>

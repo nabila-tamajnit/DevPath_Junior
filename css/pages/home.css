@@ -1,74 +1,5 @@
 
 /* ============================================
-   NAVBAR
-   ============================================ */
-   
-.navbar {
-    background-color: var(--bg-white);
-    padding: var(--space-sm) 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.navbar-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navbar .logo {
-    display: inline-block;
-}
-
-.nav-links {
-    display: flex;
-    gap: var(--space-lg);
-}
-
-.nav-links a {
-    color: var(--text-gray);
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: var(--color-primary);
-}
-
-.profile-badge {
-    display: flex;
-    align-items: center;
-    gap: var(--space-xs);
-    background-color: var(--bg-gray);
-    padding: 8px 16px;
-    border-radius: var(--radius-sm);
-}
-
-.profile-badge span {
-    font-weight: 600;
-    color: var(--text-dark);
-}
-
-.profile-badge button {
-    background: none;
-    border: none;
-    color: var(--color-primary);
-    font-weight: 600;
-    cursor: pointer;
-    padding: 4px 8px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-    font-family: inherit;
-}
-
-.profile-badge button:hover {
-    background-color: var(--color-primary);
-    color: white;
-}
-
-/* ============================================
    TOUTES LES SECTIONS
    ============================================ */
    
@@ -81,17 +12,24 @@ section {
 
 .hero {
     background: linear-gradient(135deg, var(--bg-light) 0%, #EEF2FF 100%);
+    background-image: url(../../images/hero-bg\(8\).svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.timeline,
+.readme-preview,
+.entretien {
+    background-color: var(--bg-white);
 }
 
 .checklist-preview,
 .vocabulaire {
-    background-color: var(--bg-white);
-}
-
-.readme-preview,
-.entretien {
     background-color: var(--bg-light);
 }
+
+
 
 /* ============================================
    SECTION HERO
@@ -116,7 +54,104 @@ section {
 }
 
 /* ============================================
-   STRUCTURE SECTIONS
+   SECTION TIMELINE
+   ============================================ */
+
+.timeline {
+    background-color: var(--bg-white);
+}
+
+.timeline .container {
+    text-align: center;
+}
+
+.timeline h2 {
+    font-size: 2rem;
+    margin-bottom: var(--space-sm);
+}
+
+.timeline-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-gray);
+    margin-bottom: var(--space-xl);
+}
+
+.timeline-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline-step {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.timeline-step:hover {
+    transform: translateY(-8px);
+}
+
+.step-circle {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin: 0 auto var(--space-md);
+    transition: all 0.3s ease;
+}
+
+.timeline-step:hover .step-circle {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.step-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 4px;
+}
+
+.step-number {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: white;
+}
+
+.timeline-step h3 {
+    font-size: 1.125rem;
+    margin-bottom: var(--space-xs);
+    color: var(--text-dark);
+}
+
+.timeline-step p {
+    font-size: 0.875rem;
+    color: var(--text-gray);
+    margin: 0;
+}
+
+.timeline-line {
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-primary);
+    align-self: flex-start;
+    margin-top: 50px;
+    flex-shrink: 0;
+}
+
+/* ============================================
+   SECTIONS CHECKLIST ET README
    ============================================ */
 
 .section-content {
@@ -131,9 +166,9 @@ section {
     flex: 1;
 }
 
-.section-content .reverse {
+/* .section-content .reverse {
     flex-direction: row-reverse;
-}
+} */
 
 .section-text h2 {
     font-size: 2rem;
@@ -145,27 +180,7 @@ section {
     margin-bottom: var(--space-md);
 }
 
-/* ============================================
-   PLACEHOLDERS TEMPORAIRES
-   ============================================ */
-
-.placeholder-image {
-    background-color: var(--bg-gray);
-    border-radius: var(--radius-lg);
-    padding: var(--space-xl);
-    text-align: center;
-    color: var(--text-light);
-    min-height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
-}
-
-/* ============================================
-   CERCLE DE PROGRESSION
-   ============================================ */
-
+/* CERCLE DE PROGRESSION CHECKLIST */
 .progress-circle {
     width: 120px;
     height: 120px;
@@ -202,6 +217,10 @@ section {
 }
 
 .vocab-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--bg-white);
     border-radius: var(--radius-lg);
     padding: var(--space-lg);
@@ -283,7 +302,6 @@ section {
     text-align: left;
 }
 
-/* Petite flèche en bas de la bulle question */
 .bubble-question::after {
     content: '';
     position: absolute;
@@ -301,7 +319,6 @@ section {
     text-align: left;
 }
 
-/* Petite flèche en bas de la bulle réponse */
 .bubble-answer::after {
     content: '';
     position: absolute;
@@ -329,12 +346,10 @@ section {
     font-size: 1.1rem;
 }
 
-/* Illustration en dessous */
 .entretien-illustration {
     margin-top: var(--space-xl);
 }
 
-/* Contrôles (boutons + compteur) */
 .entretien-controls {
     display: flex;
     justify-content: center;
@@ -371,69 +386,58 @@ section {
 }
 
 /* ============================================
-   FOOTER
-   ============================================ */
-
-.footer {
-    background-color: var(--text-dark);
-    color: var(--bg-light);
-    padding: var(--space-lg) 0;
-}
-
-.footer-content {
-    text-align: center;
-}
-
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: var(--space-lg);
-    margin-bottom: var(--space-md);
-    flex-wrap: wrap;
-}
-
-.footer-links a {
-    color: var(--bg-light);
-    font-size: 0.875rem;
-}
-
-.footer-links a:hover {
-    color: white;
-}
-
-.footer-copyright {
-    font-size: 0.875rem;
-    color: var(--text-light);
-}
-
-/* ============================================
    RESPONSIVE
    ============================================ */
 
 @media (max-width: 768px) {
+
+    .hero {
+        background-image: url(../../images/hero-bg_mobile\(2\).svg);
+    }
     /* Sections */
     section {
         min-height: auto;
         padding: var(--space-lg) 0;
     }
     
-    /* Navbar */
-    .nav-links {
-        display: none;
-    }
-    
     /* Hero et sections */
     .hero .container,
     .section-content {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        /* grid-template-columns: 1fr; */
         gap: var(--space-md);
     }
+
+    .checklist-preview .container .section-content {
+        flex-direction: column-reverse;
+    }
+
+    /* .section-content {
+        flex-direction: column;
+    } */
+
+    /* Timeline */
+    .timeline-steps {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline-line {
+        width: 3px;
+        height: 40px;
+        align-self: center;
+        margin-top: 0;
+        margin-bottom: var(--space-md);
+    }
+
+    .timeline-step {
+        margin-bottom: var(--space-md);
+    }
     
-    /* Annuler l'ordre inversé */
-    .section-content.reverse .section-image,
+    /* .section-content.reverse .section-image,
     .section-content.reverse .section-text {
         order: 0;
-    }
+    } */
     
     /* Bulles */
     .dialogue-bubbles {

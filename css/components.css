@@ -55,3 +55,205 @@
     color: var(--color-primary);
     font-weight: 400;
 }
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+   
+.navbar {
+    background-color: var(--bg-white);
+    padding: var(--space-sm) 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    display: inline-block;
+}
+
+/* --- BOUTON BURGER --- */
+.burger-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.burger-line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-dark);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.burger-btn.active .burger-line:nth-child(1) {
+    transform: rotate(45deg) translateY(7px);
+}
+
+.burger-btn.active .burger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-btn.active .burger-line:nth-child(3) {
+    transform: rotate(-45deg) translateY(-7px);
+}
+
+/* --- MENU DE NAVIGATION --- */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--space-lg);
+}
+
+.nav-links a {
+    color: var(--text-gray);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);
+}
+
+.profile-badge {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    background-color: var(--bg-gray);
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+}
+
+.profile-badge span {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.profile-badge button {
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    font-weight: 600;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-family: inherit;
+}
+
+.profile-badge button:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+/*  >>->>- RESPONSIVE --<<-<< */
+
+@media (max-width: 768px) {
+    .burger-btn {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--bg-white);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
+    }
+    
+    .nav-menu.active {
+        max-height: 500px;  /* Plus grand pour être sûr */
+        opacity: 1;
+        padding: var(--space-md) 0;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+    
+    .nav-links li {
+        width: 100%;
+        border-bottom: 1px solid var(--bg-gray);
+    }
+
+    .nav-links a {
+        display: block;
+        padding: var(--space-sm) var(--space-md);
+        width: 100%;
+        color: var(--text-dark);
+        text-decoration: none;
+    }
+    
+    .nav-links a:hover {
+        background-color: var(--bg-light);
+        color: var(--color-primary);
+    }
+    
+    .profile-badge {
+        margin: var(--space-sm) var(--space-md);
+        justify-content: center;
+    }
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+    background-color: var(--text-dark);
+    color: var(--bg-light);
+    padding: var(--space-lg) 0;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: var(--bg-light);
+    font-size: 0.875rem;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-copyright {
+    font-size: 0.875rem;
+    color: var(--text-light);
+}
