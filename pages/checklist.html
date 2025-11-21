@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Checklist - DevPath Junior</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages/checklist.css">
+
+    <script src="../js/main.js" defer></script>
+    <script src="../js/navbar.js" defer></script>
+    <script src="../js/checklist.js" defer></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">DevPath <span class="logo-accent">Junior</span></span>
+                </a>
+
+                <!-- Bouton burger -->
+                <button class="burger-btn" id="burgerBtn" aria-label="Menu">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </button>
+
+                <!-- Menu de navigation -->
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li><a href="checklist.html">Checklist</a></li>
+                        <li><a href="pages/readme.html">README</a></li>
+                        <li><a href="#vocabulaire">Vocabulaire</a></li>
+                        <li><a href="#entretien">Entretien</a></li>
+                    </ul>
+
+                    <div class="profile-badge" id="profileBadge">
+                        <span id="profileName">Frontend</span>
+                        <button id="changeProfile">Changer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="checklist-page">
+        <div class="container">
+
+            <!-- En-tête -->
+            <header class="checklist-header">
+                <h1>Ma Checklist de Préparation</h1>
+                <p>Suis ta progression pour décrocher ton premier job</p>
+
+                <!-- Progression globale -->
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                    <span class="progress-text" id="progressText">0%</span>
+                </div>
+
+                <p class="progress-details">
+                    <span id="completedCount">0</span> / <span id="totalCount">0</span> tâches complétées
+                </p>
+            </header>
+
+            <!-- Zone des catégories (JavaScript) -->
+            <div id="checklistContainer" class="checklist-container">
+                <!-- Les catégories et tâches par JS -->
+            </div>
+
+            <!-- Bouton ajouter une candidature -->
+            <div class="add-application-section">
+                <button class="btn btn-secondary" id="addApplicationBtn">
+                    + Ajouter une candidature
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+
+                <div class="footer-links">
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Conditions d'utilisation</a>
+                    <a href="#">Paramètres des cookies</a>
+                </div>
+
+                <p class="footer-copyright">© 2025 DevPath Junior. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+{
+  "categories": [
+    {
+      "id": "profil-portfolio",
+      "name": "Profil & Portfolio",
+      "tasks": [
+        {
+          "id": "task-1",
+          "text": "Créer mon README GitHub professionnel",
+          "completed": false,
+          "type": "checkbox"
+        },
+        {
+          "id": "task-2",
+          "text": "Publier au moins 3 projets sur GitHub",
+          "completed": false,
+          "type": "checkbox"
+        },
+        {
+          "id": "task-3",
+          "text": "Créer un portfolio en ligne",
+          "completed": false,
+          "type": "checkbox"
+        },
+        {
+          "id": "task-4",
+          "text": "Optimiser mon profil LinkedIn",
+          "completed": false,
+          "type": "checkbox"
+        },
+        {
+          "id": "task-5",
+          "text": "Préparer une photo professionnelle",
+          "completed": false,
+          "type": "checkbox"
+        },
+        {
+          "id": "task-6",
+          "text": "Créer un Linktree ou page de liens",
+          "completed": false,
+          "type": "checkbox"
+        },
+        {
+          "id": "task-7",
+          "text": "Rédiger des descriptions claires pour mes projets",
+          "completed": false,
+          "type": "checkbox"
+        }
+      ]
+    },
+    {
+      "id": "candidatures",
+      "name": "Candidatures",
+      "tasks": [
+        {
+          "id": "task-8",
+          "text": "Mettre à jour mon CV",
+          "completed": false,
+          "type": "checkbox"
+        },
+        {
+          "id": "task-9",
+          "text": "Préparer une lettre de motivation type",
+          "completed": false,
+          "type": "checkbox"
+        },
+        {
+          "id": "task-10",
+          "text": "J'ai postulé chez",
+          "completed": false,
+          "type": "text",
+          "value": "",
+          "placeholder": "Nom de l'entreprise"
+        },
+        {
+          "id": "task-11",
+          "text": "J'ai eu une réponse de",
+          "completed": false,
+          "type": "text",
+          "value": "",
+          "placeholder": "Nom de l'entreprise"
+        },
+        {
+          "id": "task-12",
+          "text": "J'ai un entretien prévu le",
+          "completed": false,
+          "type": "date",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "competences",
+      "name": "Compétences Techniques",
+      "tasks": [
+        {
+          "id": "task-13",
+          "text": "Maîtriser les langages de ma stack",
+          "completed": false,
+          "type": "checkbox"
+        },
+        {
+          "id": "task-14",
+          "text": "Connaître Git et GitHub",
+          "completed": false,
+          "type": "checkbox"
+        },
+        {
+          "id": "task-15",
+          "text": "Comprendre le responsive design",
+          "completed": false,
+          "type": "checkbox"
+        },
+        {
+          "id": "task-16",
+          "text": "Avoir des projets récents à présenter",
+          "completed": false,
+          "type": "checkbox"
+        },
+        {
+          "id": "task-17",
+          "text": "Connaître les bonnes pratiques de mon domaine",
+          "completed": false,
+          "type": "checkbox"
+        }
+      ]
+    },
+    {
+      "id": "entretien",
+      "name": "Préparation Entretien",
+      "tasks": [
+        {
+          "id": "task-18",
+          "text": "Préparer ma présentation personnelle (elevator pitch)",
+          "completed": false,
+          "type": "checkbox"
+        },
+        {
+          "id": "task-19",
+          "text": "Réviser le vocabulaire technique",
+          "completed": false,
+          "type": "checkbox"
+        },
+        {
+          "id": "task-20",
+          "text": "Préparer des exemples de mes projets",
+          "completed": false,
+          "type": "checkbox"
+        },
+        {
+          "id": "task-21",
+          "text": "Préparer des questions à poser au recruteur",
+          "completed": false,
+          "type": "checkbox"
+        },
+        {
+          "id": "task-22",
+          "text": "Simuler un entretien avec quelqu'un",
+          "completed": false,
+          "type": "checkbox"
+        }
+      ]
+    }
+  ]
+}
