@@ -1,17 +1,10 @@
-/**
- * CALCUL DE PROGRESSION DE LA CHECKLIST
- * Fichier partagé pour afficher la progression sur index.html
- */
 
 // ============================================
 // AFFICHER LA PROGRESSION SUR INDEX.HTML
 // ============================================
 
-/**
- * Charge les données et affiche la progression
- * Uniquement pour la page d'accueil
- */
-function displayChecklistProgressOnHome() {
+// Charge les données et affiche la progression
+function displayChecklistProgress() {
     
     // Vérifier qu'on est bien sur la page d'accueil
     const progressElement = document.getElementById('progressPercentage');
@@ -26,7 +19,7 @@ function displayChecklistProgressOnHome() {
     
     if (!savedDataString) {
         // Pas de données sauvegardées, on charge le JSON
-        loadChecklistDataForHome();
+        loadChecklistData();
         return;
     }
     
@@ -37,10 +30,11 @@ function displayChecklistProgressOnHome() {
 
 
 // ============================================
-// CHARGER LE JSON (si pas de données sauvegardées)
+// CHARGER LE JSON (si pas de sauvegarde de localStorage)
 // ============================================
 
-function loadChecklistDataForHome() {
+// Comme dans Checklist.js
+function loadChecklistData() {
     
     fetch('data/checklist.json')
         .then(function(response) {
@@ -59,6 +53,7 @@ function loadChecklistDataForHome() {
 // METTRE À JOUR L'AFFICHAGE
 // ============================================
 
+// Comme dans checklist.js
 function updateProgressDisplay(checklistData) {
     
     let total = 0;
@@ -106,7 +101,4 @@ function updateProgressDisplay(checklistData) {
 // LANCER AU CHARGEMENT
 // ============================================
 
-// Attendre que le DOM soit prêt
-document.addEventListener('DOMContentLoaded', function() {
-    displayChecklistProgressOnHome();
-});
+    displayChecklistProgress();
