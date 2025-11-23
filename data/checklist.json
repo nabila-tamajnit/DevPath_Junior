@@ -49,47 +49,6 @@
       ]
     },
     {
-      "id": "candidatures",
-      "name": "Candidatures",
-      "tasks": [
-        {
-          "id": "task-8",
-          "text": "Mettre à jour mon CV",
-          "completed": false,
-          "type": "checkbox"
-        },
-        {
-          "id": "task-9",
-          "text": "Préparer une lettre de motivation type",
-          "completed": false,
-          "type": "checkbox"
-        },
-        {
-          "id": "task-10",
-          "text": "J'ai postulé chez",
-          "completed": false,
-          "type": "text",
-          "value": "",
-          "placeholder": "Nom de l'entreprise"
-        },
-        {
-          "id": "task-11",
-          "text": "J'ai eu une réponse de",
-          "completed": false,
-          "type": "text",
-          "value": "",
-          "placeholder": "Nom de l'entreprise"
-        },
-        {
-          "id": "task-12",
-          "text": "J'ai un entretien prévu le",
-          "completed": false,
-          "type": "date",
-          "value": ""
-        }
-      ]
-    },
-    {
       "id": "competences",
       "name": "Compétences Techniques",
       "tasks": [
@@ -131,7 +90,7 @@
       "tasks": [
         {
           "id": "task-18",
-          "text": "Préparer ma présentation personnelle (elevator pitch)",
+          "text": "Préparer ma présentation personnelle",
           "completed": false,
           "type": "checkbox"
         },
@@ -160,6 +119,48 @@
           "type": "checkbox"
         }
       ]
+    },
+    {
+      "id": "candidatures",
+      "name": "Candidatures",
+      "tasks": [
+        {
+          "id": "task-8",
+          "text": "Mettre à jour mon CV",
+          "completed": false,
+          "type": "checkbox"
+        },
+        {
+          "id": "task-9",
+          "text": "Préparer une lettre de motivation",
+          "completed": false,
+          "type": "checkbox"
+        },
+        {
+          "id": "task-10",
+          "text": "J'ai postulé chez",
+          "completed": false,
+          "type": "text",
+          "value": "",
+          "placeholder": "Nom de l'entreprise"
+        },
+        {
+          "id": "task-11",
+          "text": "J'ai eu une réponse de",
+          "completed": false,
+          "type": "text",
+          "value": "",
+          "placeholder": "Nom de l'entreprise"
+        },
+        {
+          "id": "task-12",
+          "text": "J'ai un entretien prévu le",
+          "completed": false,
+          "type": "date",
+          "value": ""
+        }
+      ],
+      "applications": []
     }
   ]
 }

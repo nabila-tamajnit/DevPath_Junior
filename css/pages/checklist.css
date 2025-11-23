@@ -1,8 +1,4 @@
 
-/* ============================================
-   PAGE PRINCIPALE
-   ============================================ */
-
 .checklist-page {
     min-height: 100vh;
     padding: var(--space-xl) 0;
@@ -33,34 +29,27 @@
    BARRE DE PROGRESSION
    ============================================ */
 
+/* Barre vide */
 .progress-bar {
-    /* Barre vide (fond gris) */
     width: 100%;
     max-width: 600px;
     height: 30px;
     background-color: var(--bg-gray);
     border-radius: 15px;
     margin: 0 auto var(--space-sm);
-    
-    /* Position relative pour la barre de remplissage */
     position: relative;
     overflow: hidden;
 }
 
-/* Barre de remplissage (bleu) */
+/* Barre de remplissage (JS) */
 .progress-fill {
     height: 100%;
     background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
     border-radius: 15px;
-    
-    /* Largeur à 0 au départ (sera changée par JS) */
     width: 0%;
-    
-    /* Transition smooth */
     transition: width 0.5s ease;
 }
 
-/* Texte du pourcentage (au centre de la barre) */
 .progress-text {
     position: absolute;
     top: 50%;
@@ -87,9 +76,7 @@
     margin: 0 auto;
 }
 
-/* ============================================
-   UNE CATÉGORIE
-   ============================================ */
+/* ============ CATÉGORIES en JS ============== */
 
 .category {
     background-color: var(--bg-white);
@@ -107,9 +94,7 @@
     padding-bottom: var(--space-sm);
 }
 
-/* ============================================
-   UNE TÂCHE
-   ============================================ */
+/* ============= TÂCHES en JS ================= */
 
 .task {
     display: flex;
@@ -128,7 +113,7 @@
     width: 20px;
     height: 20px;
     cursor: pointer;
-    flex-shrink: 0;  /* Ne rétrécit pas */
+    flex-shrink: 0;
 }
 
 /* Label de la tâche */
@@ -159,15 +144,6 @@
 .task input[type="date"]:focus {
     outline: none;
     border-color: var(--color-primary);
-}
-
-/* ============================================
-   BOUTON AJOUTER CANDIDATURE
-   ============================================ */
-
-.add-application-section {
-    text-align: center;
-    margin-top: var(--space-lg);
 }
 
 /* ============================================

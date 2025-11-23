@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/pages/checklist.css">
 
-    <script src="../js/main.js" defer></script>
-    <script src="../js/navbar.js" defer></script>
-    <script src="../js/checklist.js" defer></script>
+    <script defer src="../js/main.js"></script>
+    <script defer src="../js/navbar.js"></script>
+    <script defer src="../js/checklist.js"></script>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="navbar-content">
-                <a href="index.html" class="logo">
+                <a href="../index.html" class="logo">
                     <span class="logo-text">DevPath <span class="logo-accent">Junior</span></span>
                 </a>
 
@@ -37,9 +37,9 @@
                     <ul class="nav-links">
                         <li><a href="../index.html">Accueil</a></li>
                         <li><a href="checklist.html">Checklist</a></li>
-                        <li><a href="pages/readme.html">README</a></li>
-                        <li><a href="#vocabulaire">Vocabulaire</a></li>
-                        <li><a href="#entretien">Entretien</a></li>
+                        <li><a href="readme.html">README</a></li>
+                        <li><a href="../index.html">Vocabulaire</a></li>
+                        <li><a href="../index.html">Entretien</a></li>
                     </ul>
 
                     <div class="profile-badge" id="profileBadge">
@@ -54,12 +54,11 @@
     <main class="checklist-page">
         <div class="container">
 
-            <!-- En-tête -->
             <header class="checklist-header">
                 <h1>Ma Checklist de Préparation</h1>
                 <p>Suis ta progression pour décrocher ton premier job</p>
 
-                <!-- Progression globale -->
+                <!-- Progression -->
                 <div class="progress-bar">
                     <div class="progress-fill" id="progressFill"></div>
                     <span class="progress-text" id="progressText">0%</span>
@@ -70,22 +69,13 @@
                 </p>
             </header>
 
-            <!-- Zone des catégories (JavaScript) -->
             <div id="checklistContainer" class="checklist-container">
-                <!-- Les catégories et tâches par JS -->
-            </div>
-
-            <!-- Bouton ajouter une candidature -->
-            <div class="add-application-section">
-                <button class="btn btn-secondary" id="addApplicationBtn">
-                    + Ajouter une candidature
-                </button>
+                <!-- En JS : Catégories + taches -->
             </div>
 
         </div>
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
