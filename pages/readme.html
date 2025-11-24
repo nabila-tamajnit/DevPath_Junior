@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de README - DevPath Junior</title>
+    
+    <!-- Tes CSS existants -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages/readme.css">
+    
+    <!-- Librairie Marked.js pour convertir markdown → HTML -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <!-- Ton JS -->
+    <script defer src="../js/navbar.js"></script>
+    <script defer src="../js/readme.js"></script>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <a href="../index.html" class="logo">
+                    <span class="logo-text">DevPath <span class="logo-accent">Junior</span></span>
+                </a>
+
+                <button class="burger-btn" id="burgerBtn" aria-label="Menu">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </button>
+
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li><a href="checklist.html">Checklist</a></li>
+                        <li><a href="readme.html">README</a></li>
+                        <li><a href="../index.html#vocabulaire">Vocabulaire</a></li>
+                        <li><a href="../index.html#entretien">Entretien</a></li>
+                    </ul>
+
+                    <div class="profile-badge" id="profileBadge">
+                        <span id="profileName">Frontend</span>
+                        <button id="changeProfile">Changer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="readme-page">
+        <div class="container">
+            
+            <!-- EN-TÊTE -->
+            <header class="readme-header">
+                <h1>Générateur de README GitHub</h1>
+                <p>Crée un README professionnel en quelques clics</p>
+            </header>
+
+            <!-- CONTENU PRINCIPAL : Formulaire puis Preview -->
+            <div class="readme-content">
+                
+                <!-- ============================================
+                     FORMULAIRE
+                     ============================================ -->
+                <div class="readme-form">
+                    
+                    <!-- Message d'instruction -->
+                    <p class="form-instruction">
+                        Remplis le formulaire et clique sur "Générer mon README" pour voir le résultat
+                    </p>
+                    
+                    <!-- 1. INFORMATIONS DE BASE -->
+                    <section class="form-section">
+                        <h2>📝 Informations de base</h2>
+                        
+                        <div class="form-group">
+                            <label for="userName">Nom complet</label>
+                            <input type="text" id="userName" placeholder="Ex: Marie Dubois">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="userTitle">Titre / Poste</label>
+                            <input type="text" id="userTitle" placeholder="Ex: Développeuse Frontend Junior">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="userBio">Bio (courte description)</label>
+                            <textarea id="userBio" rows="3" placeholder="Ex: Passionnée par le web, je crée des interfaces modernes et accessibles..."></textarea>
+                        </div>
+                    </section>
+
+                    <!-- 2. PARCOURS & FORMATION -->
+                    <section class="form-section">
+                        <h2>🎓 Parcours & Formation</h2>
+                        
+                        <div class="form-group">
+                            <label for="userFormation">Formation actuelle ou dernière formation</label>
+                            <input type="text" id="userFormation" placeholder="Ex: Formation Développeur Web Full Stack">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="userSchool">École / Organisme</label>
+                            <input type="text" id="userSchool" placeholder="Ex: BeCode, OpenClassrooms, Simplon...">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="userFormationStart">Année de début</label>
+                                <input type="text" id="userFormationStart" placeholder="Ex: 2024">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="userFormationEnd">Année de fin (ou en cours)</label>
+                                <input type="text" id="userFormationEnd" placeholder="Ex: 2025 ou En cours">
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 3. CE QUE JE RECHERCHE -->
+                    <section class="form-section">
+                        <h2>🎯 Ce que je recherche (optionnel)</h2>
+                        
+                        <div class="form-group">
+                            <label for="userSearching">Décris ce que tu recherches</label>
+                            <textarea id="userSearching" rows="2" placeholder="Ex: Je recherche une alternance en développement Frontend à partir de juin 2025, en remote ou sur Paris"></textarea>
+                        </div>
+                        
+                        <p class="form-hint">
+                            💡 Laisse vide si tu ne recherches rien actuellement
+                        </p>
+                    </section>
+
+                    <!-- 4. COMPÉTENCES TECHNIQUES -->
+                    <section class="form-section">
+                        <h2>💻 Compétences techniques</h2>
+                        
+                        <div class="form-group">
+                            <label for="userSkills">Langages et technologies (séparés par des virgules)</label>
+                            <input type="text" id="userSkills" placeholder="Ex: HTML, CSS, JavaScript, React, Node.js">
+                        </div>
+                    </section>
+
+                    <!-- 5. EN CE MOMENT J'APPRENDS -->
+                    <section class="form-section">
+                        <h2>📚 En ce moment j'apprends...</h2>
+                        
+                        <div class="form-group">
+                            <label for="userLearning">Technologies ou concepts que tu explores</label>
+                            <input type="text" id="userLearning" placeholder="Ex: TypeScript, Next.js, Architecture microservices...">
+                        </div>
+                    </section>
+
+                    <!-- 6. LANGUES -->
+                    <section class="form-section">
+                        <h2>🌍 Langues</h2>
+                        
+                        <div class="form-group">
+                            <label for="userLanguages">Langues parlées (séparées par des virgules)</label>
+                            <input type="text" id="userLanguages" placeholder="Ex: Français (natif), Anglais (B2), Néerlandais (A2)">
+                        </div>
+                    </section>
+
+                    <!-- 7. PROJETS À METTRE EN AVANT -->
+                    <section class="form-section">
+                        <h2>🚀 Projets à mettre en avant</h2>
+                        
+                        <!-- Projet 1 -->
+                        <div class="project-group">
+                            <h3>Projet 1</h3>
+                            <div class="form-group">
+                                <label for="project1Name">Nom du projet</label>
+                                <input type="text" id="project1Name" placeholder="Ex: Portfolio Personnel">
+                            </div>
+                            <div class="form-group">
+                                <label for="project1Desc">Description</label>
+                                <input type="text" id="project1Desc" placeholder="Ex: Site vitrine responsive avec animations CSS">
+                            </div>
+                            <div class="form-group">
+                                <label for="project1Link">Lien (optionnel)</label>
+                                <input type="url" id="project1Link" placeholder="https://github.com/...">
+                            </div>
+                        </div>
+
+                        <!-- Projet 2 -->
+                        <div class="project-group">
+                            <h3>Projet 2</h3>
+                            <div class="form-group">
+                                <label for="project2Name">Nom du projet</label>
+                                <input type="text" id="project2Name" placeholder="Ex: Application To-Do List">
+                            </div>
+                            <div class="form-group">
+                                <label for="project2Desc">Description</label>
+                                <input type="text" id="project2Desc" placeholder="Ex: App de gestion de tâches en React">
+                            </div>
+                            <div class="form-group">
+                                <label for="project2Link">Lien (optionnel)</label>
+                                <input type="url" id="project2Link" placeholder="https://github.com/...">
+                            </div>
+                        </div>
+
+                        <!-- Projet 3 -->
+                        <div class="project-group">
+                            <h3>Projet 3</h3>
+                            <div class="form-group">
+                                <label for="project3Name">Nom du projet</label>
+                                <input type="text" id="project3Name" placeholder="Ex: API REST">
+                            </div>
+                            <div class="form-group">
+                                <label for="project3Desc">Description</label>
+                                <input type="text" id="project3Desc" placeholder="Ex: API de gestion de produits avec Node.js">
+                            </div>
+                            <div class="form-group">
+                                <label for="project3Link">Lien (optionnel)</label>
+                                <input type="url" id="project3Link" placeholder="https://github.com/...">
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 8. CONTACT & RÉSEAUX -->
+                    <section class="form-section">
+                        <h2>📫 Contact & Réseaux</h2>
+                        
+                        <div class="form-group">
+                            <label for="userGithub">GitHub (username)</label>
+                            <input type="text" id="userGithub" placeholder="Ex: mariedubois">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="userLinkedin">LinkedIn (URL)</label>
+                            <input type="url" id="userLinkedin" placeholder="https://linkedin.com/in/...">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="userEmail">Email</label>
+                            <input type="email" id="userEmail" placeholder="contact@example.com">
+                        </div>
+                    </section>
+
+                    <!-- 9. STATS GITHUB (OPTIONNEL) -->
+                    <section class="form-section">
+                        <h2>📊 Stats GitHub</h2>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="includeGithubStats">
+                                <span>Afficher mes statistiques GitHub dans le README</span>
+                            </label>
+                            <p class="form-hint">
+                                (Nécessite ton username GitHub renseigné ci-dessus)
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- 10. CHOIX DU STYLE -->
+                    <section class="form-section">
+                        <h2>🎨 Style du README</h2>
+                        
+                        <div class="style-choices">
+                            <label class="style-option">
+                                <input type="radio" name="readmeStyle" value="professionnel" checked>
+                                <span>📋 Professionnel</span>
+                            </label>
+                            
+                            <label class="style-option">
+                                <input type="radio" name="readmeStyle" value="creatif">
+                                <span>🎨 Créatif</span>
+                            </label>
+                            
+                            <label class="style-option">
+                                <input type="radio" name="readmeStyle" value="minimaliste">
+                                <span>✨ Minimaliste</span>
+                            </label>
+                        </div>
+                        
+                        <p class="form-hint">
+                            💡 Change de style pour voir le résultat en temps réel
+                        </p>
+                    </section>
+                    
+                    <!-- BOUTON GÉNÉRER -->
+                    <div class="form-actions">
+                        <button class="btn btn-primary" id="generateButton">
+                            ✨ Générer mon README
+                        </button>
+                    </div>
+                    
+                </div>
+
+                <!-- ============================================
+                     PREVIEW (APPARAÎT APRÈS GÉNÉRATION)
+                     ============================================ -->
+                <div class="readme-preview" id="readmePreview" style="display: none;">
+                    
+                    <div class="preview-header">
+                        <h2>Aperçu du README</h2>
+                    </div>
+                    
+                    <!-- Zone où le markdown sera converti en HTML -->
+                    <div class="preview-content" id="previewContent">
+                        <!-- Le contenu sera généré en JavaScript -->
+                    </div>
+                    
+                    <!-- Footer avec bouton Copier -->
+                    <div class="preview-footer">
+                        <button class="btn btn-primary" id="copyButton">
+                            📋 Copier le code markdown
+                        </button>
+                        <p class="form-hint">
+                            Colle ce code dans ton fichier README.md sur GitHub
+                        </p>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Conditions d'utilisation</a>
+                    <a href="#">Paramètres des cookies</a>
+                </div>
+                <p class="footer-copyright">© 2025 DevPath Junior. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

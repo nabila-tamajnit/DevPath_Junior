@@ -1,0 +1,474 @@
+
+.readme-page {
+    min-height: 100vh;
+    padding: var(--space-xl) 0;
+    background-color: var(--bg-light);
+}
+
+/* ============================================
+   EN-TÊTE
+   ============================================ */
+
+.readme-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.readme-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-sm);
+}
+
+.readme-header p {
+    font-size: 1.125rem;
+    color: var(--text-gray);
+}
+
+/* ============================================
+   LAYOUT : VERTICAL
+   ============================================ */
+
+.readme-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   FORMULAIRE
+   ============================================ */
+
+.readme-form {
+    background-color: var(--bg-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --- MESSAGE D'INSTRUCTION --- */
+
+.form-instruction {
+    background-color: #EEF2FF;
+    padding: var(--space-md);
+    border-radius: var(--radius-sm);
+    border-left: 4px solid var(--color-primary);
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: var(--space-xl);
+}
+
+/* --- SECTIONS DU FORMULAIRE --- */
+
+.form-section {
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-lg);
+    border-bottom: 2px solid var(--bg-gray);
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+    margin-bottom: var(--space-lg);
+}
+
+.form-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-md);
+    color: var(--text-dark);
+}
+
+/* --- GROUPES DE CHAMPS --- */
+
+.form-group {
+    margin-bottom: var(--space-md);
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: var(--space-xs);
+    font-size: 0.95rem;
+}
+
+/* --- INPUTS, TEXTAREA, SELECT --- */
+
+.form-group input[type="text"],
+.form-group input[type="url"],
+.form-group input[type="email"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--bg-gray);
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--text-dark);
+    background-color: var(--bg-white);
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* FIX TEXTAREA : Force la largeur à 100% */
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+    width: 100% !important;
+    max-width: 100%;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+/* --- PLACEHOLDER --- */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-light);
+}
+
+/* --- TEXTE D'AIDE (HINTS) --- */
+
+.form-hint {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    margin-top: var(--space-xs);
+    font-style: italic;
+}
+
+/* --- FORM-ROW (2 champs côte à côte avec FLEXBOX) --- */
+
+.form-row {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* --- GROUPES DE PROJETS --- */
+
+.project-group {
+    background-color: var(--bg-light);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+    border-left: 4px solid var(--color-primary);
+}
+
+.project-group h3 {
+    font-size: 1.125rem;
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+}
+
+.project-group:last-child {
+    margin-bottom: 0;
+}
+
+/* --- CHECKBOX POUR STATS GITHUB --- */
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* --- CHOIX DE STYLE (RADIO BUTTONS avec FLEXBOX) --- */
+
+.style-choices {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.style-option {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-md);
+    border: 2px solid var(--bg-gray);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: var(--bg-white);
+}
+
+.style-option:hover {
+    border-color: var(--color-primary);
+    background-color: var(--bg-light);
+    transform: translateY(-2px);
+}
+
+.style-option input[type="radio"] {
+    margin-right: var(--space-xs);
+    cursor: pointer;
+}
+
+/* Quand un style est sélectionné */
+.style-option:has(input[type="radio"]:checked) {
+    border-color: var(--color-primary);
+    background-color: #EEF2FF;
+    box-shadow: 0 0 0 3px rgba(59, 95, 198, 0.1);
+}
+
+.style-option span {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* --- ZONE DES BOUTONS D'ACTION --- */
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    padding-top: var(--space-md);
+}
+
+.form-actions .btn {
+    min-width: 300px;
+    max-width: 400px;
+    padding: 18px 48px;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+/* ============================================
+   PREVIEW
+   ============================================ */
+
+.readme-preview {
+    background-color: var(--bg-white);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- HEADER DE LA PREVIEW --- */
+
+.preview-header {
+    padding: var(--space-lg) var(--space-xl);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.preview-header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: white;
+}
+
+/* --- CONTENU DE LA PREVIEW --- */
+
+.preview-content {
+    padding: var(--space-xl);
+    background-color: var(--bg-white);
+    font-size: 1rem;
+    line-height: 1.8;
+    min-height: 400px;
+    max-height: 800px;
+    overflow-y: auto;
+}
+
+/* Style du contenu markdown converti en HTML */
+.preview-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-lg);
+    border-bottom: 3px solid var(--bg-gray);
+    padding-bottom: var(--space-md);
+    color: var(--text-dark);
+}
+
+.preview-content h2 {
+    font-size: 1.875rem;
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-md);
+    color: var(--text-dark);
+}
+
+.preview-content h3 {
+    font-size: 1.5rem;
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-sm);
+    color: var(--text-dark);
+}
+
+.preview-content p {
+    margin-bottom: var(--space-md);
+    color: var(--text-gray);
+}
+
+.preview-content ul,
+.preview-content ol {
+    margin-left: var(--space-lg);
+    margin-bottom: var(--space-md);
+}
+
+.preview-content li {
+    margin-bottom: var(--space-sm);
+    color: var(--text-gray);
+}
+
+.preview-content a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.preview-content a:hover {
+    color: var(--color-secondary);
+}
+
+.preview-content code {
+    background-color: var(--bg-gray);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: var(--color-primary);
+}
+
+.preview-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-sm);
+    margin: var(--space-md) 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour les badges GitHub (images inline) */
+.preview-content p img {
+    display: inline-block;
+    margin: 0 4px;
+    vertical-align: middle;
+}
+
+/* --- FOOTER DE LA PREVIEW (BOUTON COPIER) --- */
+
+.preview-footer {
+    padding: var(--space-xl);
+    background-color: var(--bg-light);
+    border-top: 2px solid var(--bg-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.preview-footer .btn {
+    min-width: 300px;
+    max-width: 400px;
+    padding: 18px 48px;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.preview-footer .form-hint {
+    text-align: center;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* Container prend toute la largeur sur mobile */
+    .readme-content {
+        max-width: 100%;
+    }
+    
+    /* Formulaire et preview avec moins de padding */
+    .readme-form,
+    .preview-content {
+        padding: var(--space-lg);
+    }
+    
+    /* Form-row passe en colonne */
+    .form-row {
+        flex-direction: column;
+    }
+    
+    /* Les styles options passent en colonne */
+    .style-choices {
+        flex-direction: column;
+    }
+    
+    /* Boutons prennent plus de largeur sur mobile */
+    .form-actions .btn,
+    .preview-footer .btn {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    
+    /* Titres plus petits */
+    .readme-header h1 {
+        font-size: 2rem;
+    }
+    
+    .form-section h2 {
+        font-size: 1.25rem;
+    }
+    
+    .preview-content h1 {
+        font-size: 2rem;
+    }
+    
+    .preview-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .preview-content h3 {
+        font-size: 1.25rem;
+    }
+    
+    /* Preview header en colonne sur mobile */
+    .preview-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-sm);
+    }
+}
+
+/* ============================================
+   SCROLLBAR PERSONNALISÉE (PREVIEW)
+   ============================================ */
+
+.preview-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.preview-content::-webkit-scrollbar-track {
+    background: var(--bg-light);
+    border-radius: 5px;
+}
+
+.preview-content::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 5px;
+}
+
+.preview-content::-webkit-scrollbar-thumb:hover {
+    background: var(--color-secondary);
+}
