@@ -1,12 +1,14 @@
-// =========== VARIABLES GLOBALES ============
-// Stocke les données de la checklist (vide pour l'instant)
+//* =============================================
+//* VARIABLES GLOBALES
+//* =============================================
+// Stocker les données de la checklist (vide pour l'instant)
 let checklistData = null;
 
-// -- Éléments de la barre de progression --
+// -- Barre de progression --
 const progressFill = document.getElementById('progressFill');
 const progressText = document.getElementById('progressText');
 
-// -- Éléments des compteurs --
+// -- Compteurs --
 const completedCount = document.getElementById('completedCount');
 const totalCount = document.getElementById('totalCount');
 
@@ -16,7 +18,9 @@ const checklistContainer = document.getElementById('checklistContainer');
 console.log('Variables initialisées');
 
 
-// ================= CHARGER LES DONNÉES DEPUIS LE JSON ==================
+//* =============================================
+//* CHARGER LES DONNÉES DEPUIS LE JSON 
+//* =============================================
 
 function loadChecklist() {
     console.log('Chargement de la checklist...');
@@ -52,7 +56,9 @@ function loadChecklist() {
 }
 
 
-// ================= AFFICHER LA CHECKLIST ==================
+//* =============================================
+//* AFFICHER LA CHECKLIST
+//* =============================================
 
 function displayChecklist() {
     console.log('Affichage de la checklist');
@@ -93,7 +99,9 @@ function displayChecklist() {
 }
 
 
-// ================= CRÉER UNE TÂCHE ==================
+//* =============================================
+//* CRÉER UNE TÂCHE
+//* =============================================
 
 function createTaskElement(task) {
 
@@ -107,7 +115,7 @@ function createTaskElement(task) {
         taskDiv.classList.add('completed');
     }
 
-    // --- TYPE CHECKBOX ---
+    //? >>>----- TYPE CHECKBOX -----<<<
     if (task.type === 'checkbox') {
 
         const checkbox = document.createElement('input');
@@ -127,7 +135,7 @@ function createTaskElement(task) {
         taskDiv.append(checkbox, label);
     }
 
-    // --- TYPE TEXT ---
+    //? >>>----- TYPE TEXT -----<<<
     else if (task.type === 'text') {
 
         const checkbox = document.createElement('input');
@@ -155,7 +163,7 @@ function createTaskElement(task) {
         taskDiv.append(checkbox, label, input);
     }
 
-    // --- TYPE DATE ---
+    //? >>>----- TYPE DATE -----<<<
     else if (task.type === 'date') {
 
         const checkbox = document.createElement('input');
@@ -186,7 +194,9 @@ function createTaskElement(task) {
 }
 
 
-// ================= COCHER/DÉCOCHER UNE TÂCHE ==================
+//* =============================================
+//* COCHER/DÉCOCHER UNE TÂCHE
+//* =============================================
 
 function toggleTask(taskId) {
     console.log('Inverser la tâche :', taskId);
@@ -224,7 +234,9 @@ function toggleTask(taskId) {
 }
 
 
-// ================= SAUVEGARDER DANS LOCALSTORAGE ==================
+//* =============================================
+//* SAUVEGARDER DANS LOCALSTORAGE
+//* =============================================
 
 function saveData() {
 
@@ -238,7 +250,9 @@ function saveData() {
 }
 
 
-// ================= SAUVEGARDER LA VALEUR D'UN INPUT ==================
+//* =============================================
+//* SAUVEGARDER LA VALEUR D'UN INPUT
+//* =============================================
 
 function saveInputValue(taskId, value) {
     console.log('Input sauvegardé :', taskId, value);
@@ -258,7 +272,9 @@ function saveInputValue(taskId, value) {
 }
 
 
-// ================= CHARGER LES DONNÉES SAUVEGARDÉES ==================
+//* =============================================
+//* CHARGER LES DONNÉES SAUVEGARDÉES
+//* =============================================
 
 function loadSavedData() {
 
@@ -298,7 +314,9 @@ function loadSavedData() {
 }
 
 
-// ================= CALCULER LA PROGRESSION ==================
+//* =============================================
+//* CALCULER LA PROGRESSION
+//* =============================================
 
 function calculateProgress() {
 
@@ -337,5 +355,7 @@ function calculateProgress() {
 }
 
 
-// ================= LANCER AU CHARGEMENT DE LA PAGE ==================
+//* =============================================
+//* LANCER AU CHARGEMENT DE LA PAGE
+//* =============================================
 loadChecklist();

@@ -10,11 +10,13 @@ let generatedMarkdown = '';
 
 console.log('Variables initiales');
 
+// Je vais d'abord créer toutes les fontions que j'ai besoin, puis créer les évenements
+//! >>>>>>>>>>>>>>> LES FONCTIONS <<<<<<<<<<<<<<<<<<<
 
 //* =============================================
-//* RÉCUPÉRER LES DONNÉES DU FORMULAIRE
+//* FONCTION : RÉCUPÉRER LES DONNÉES DU FORMULAIRE
 //* =============================================
-function CollectFormData() {
+function collectFormData() {
     console.log('Collecte des données du formulaire...');
 
     // Objet des infos (vide pour l'instant)
@@ -115,9 +117,9 @@ function CollectFormData() {
 
 
 //* =============================================
-//* GÉNÉRER LE MARKDOWN
+//* FONCTION : GÉNÉRER LE MARKDOWN
 //* =============================================
-function generateMarkdown() {
+function generateMarkdown(data) {
     console.log('Générer du markdown avec le style :', data.style);
 
     // Variable vide
@@ -141,7 +143,7 @@ function generateMarkdown() {
 
 
 //* =============================================
-//* STYLE PROFESSIONNEL
+//* FONCTION : STYLE PROFESSIONNEL
 //* =============================================
 function generateProfessionalStyle(data) {
 
@@ -258,7 +260,7 @@ function generateProfessionalStyle(data) {
         })
     }
     //? >>>----- CONTACT & RÉSEAUX -----<<<
-    md = `## 📫 Contact\n\n`;
+    md += `## 📫 Contact\n\n`;
 
     if (data.email) {
         md += `📧 ${data.email}\n\n`;
@@ -294,7 +296,7 @@ function generateProfessionalStyle(data) {
 
 
 //* =============================================
-//* STYLE CRÉATIF
+//* FONCTION : STYLE CRÉATIF
 //* =============================================
 function generateCreativeStyle(data) {
 
@@ -404,7 +406,7 @@ function generateCreativeStyle(data) {
         })
     }
     //? >>>----- CONTACT & RÉSEAUX -----<<<
-    md = `## 📬 On reste en contact ?\n\n`;
+    md += `## 📬 On reste en contact ?\n\n`;
 
     if (data.email) {
         md += `📧 ${data.email}\n\n`;
@@ -437,7 +439,7 @@ function generateCreativeStyle(data) {
 
 
 //* =============================================
-//* STYLE MINIMALISTE
+//* FONCTION : STYLE MINIMALISTE
 //* =============================================
 function generateMinimalistStyle(data) {
 
@@ -553,3 +555,126 @@ function generateMinimalistStyle(data) {
 
     return md;
 }
+
+
+//* =============================================
+//* FONCTION : AFFICHER LA PREVIEW
+//* =============================================
+function displayPreview(markdown){
+    console.log('Affichage de la preview...');
+
+    // Convertir le markdown en HTML avec Marked.js
+    const html = marked.parse(markdown);
+
+    // Injecter le HTML dans la div preview-content
+    previewContent.innerHTML = html;
+
+    // Afficher la section preview (qui était cachée)
+    readmePreview.style.display = 'flex';
+
+    // Scroll automatique vers la preview
+    readmePreview.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // comportement: smooth (fluide)
+    // bloc: start (aligné au debut de la fenêtre)
+
+    console.log('Preview affichée !');
+}
+
+
+//* =============================================
+//* FONCTION : COPIER LE MARKDOWN
+//* =============================================
+function copyMarkdown() {
+    console.log('Copie du markdown...');
+
+    // Si pas de markdown généré
+    if (!generatedMarkdown) {
+        alert('⚠️ Génère d\'abord ton README avant de le copier !');
+        return; // Arrète la fontion
+    }
+
+    // Copier dans le presse-papier avec l'API du navigateur
+    navigator.clipboard.writeText(generatedMarkdown)
+
+    .then(function() {
+        console.log('Markdown copié !');
+
+        // Changer temporairement le texte du bouton pour confirmer
+        const originalText = copyButton.textContent;
+        copyButton.textContent = `✅ Copié !`;
+
+        // Remettre le texte d'origine après 2 secondes
+        setTimeout(function() {
+            copyButton.textContent = originalText;
+        }, 2000);
+    })
+
+    .catch(function(error) {
+        console.error('Erreur de copie :', error);
+        alert('❌ Erreur lors de la copie. Essaie de copier manuellement.');
+    });
+}
+
+
+//! >>>>>>>>>>>>>>> LES ÉVÉNEMENTS <<<<<<<<<<<<<<<<<
+
+//* =============================================
+//* ÉVÉNEMENT : CLIC SUR "GÉNÉRER MON README"
+//* =============================================
+
+generateButton.addEventListener('click', function(){
+    console.log('Bouton "Générer" cliqué');
+
+    // Récupérer les données du formulaire que j'ai collecté dans la fonction collectFormData()
+    const userData = collectFormData();
+
+    // Si pas au moins le nom, pas de readme
+    if (!userData.name) {
+        alert('⚠️ Remplis au moins ton nom pour générer le README !');
+        return;
+    }
+
+    // Générer le markdown du le style choisi
+    generatedMarkdown = generateMarkdown(userData);
+
+    // Afficher la preview avec la fonction que j'ai créer, qui reprend la fonction pour genéré avec le style choisi
+    displayPreview(generatedMarkdown);
+
+    console.log('README généré avec succès !');
+})
+
+//* =============================================
+//* ÉVÉNEMENT : CLIC SUR "COPIER LE CODE"
+//* =============================================
+
+copyButton.addEventListener('click', function() {
+    console.log('Bouton "Copier" cliqué');
+
+    // On appelle la fonction:
+    copyMarkdown();
+})
+
+//* =============================================
+//* ÉVÉNEMENT : CHANGEMENT DE STYLE
+//* =============================================
+
+// On récupère tous les radio buttons de style
+const styleRadios = document.querySelectorAll('input[name="readmeStyle"]');
+
+// Aux changements sur chaque radio
+styleRadios.forEach(function(radio) {
+    radio.addEventListener('change', function() {
+        console.log('Style changé :', radio.value);
+
+        // Si un README a déjà été généré
+        if (generateMarkdown) {
+            // Collecter les données
+            const userData = collectFormData();
+            // Généré le markdown avec style choisi
+            generatedMarkdown = generateMarkdown(userData);
+            // Afficher avec le bon style
+            displayPreview(generatedMarkdown);
+        }
+
+    })
+})
