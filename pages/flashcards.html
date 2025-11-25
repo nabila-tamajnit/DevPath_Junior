@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards - DevPath Junior</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages/flashcards.css">
+
+    <script defer src="../js/navbar.js"></script>
+    <script defer src="../js/flashcards.js"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <a href="../index.html" class="logo">
+                    <span class="logo-text">DevPath <span class="logo-accent">Junior</span></span>
+                </a>
+
+                <!-- Bouton burger -->
+                <button class="burger-btn" id="burgerBtn" aria-label="Menu">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </button>
+
+                <!-- Menu de navigation -->
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li><a href="checklist.html">Checklist</a></li>
+                        <li><a href="readme.html">README</a></li>
+                        <li><a href="../index.html#vocabulaire">Vocabulaire</a></li>
+                        <li><a href="../index.html#entretien">Entretien</a></li>
+                    </ul>
+
+                    <div class="profile-badge" id="profileBadge">
+                        <span id="profileName">Frontend</span>
+                        <button id="changeProfile">Changer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flashcards-page">
+        <div class="container">
+
+            <!-- EN-TÊTE -->
+            <header class="flashcards-header">
+                <h1>Flashcards - <span id="profileTitle">Frontend</span></h1>
+                <p>Clique sur la carte pour voir la définition</p>
+
+                <!-- Compteur de progression -->
+                <div class="progress-info">
+                    <span id="currentCard">1</span> / <span id="totalCards">15</span>
+                </div>
+            </header>
+
+            <!-- ZONE DE LA CARTE -->
+            <div class="flashcard-container">
+
+                <div class="flashcard" id="flashcard">
+                    <div class="card-inner" id="cardInner">
+
+                        <!-- RECTO -->
+                        <div class="card-front">
+                            <p class="card-label">Terme</p>
+                            <p class="card-term" id="cardTerm">HTML</p>
+                            <p class="card-hint">Clique pour voir la définition</p>
+                        </div>
+
+                        <!-- VERSO -->
+                        <div class="card-back">
+                            <p class="card-label">Définition</p>
+                            <p class="card-definition" id="cardDefinition">
+                                HyperText Markup Language : langage de balisage qui structure le contenu d'une page web.
+                            </p>
+
+                            <!-- Boutons d'action (uniquement sur le verso) -->
+                            <div class="card-actions">
+                                <button class="btn btn-secondary" id="btnReview">
+                                    🔄 À revoir
+                                </button>
+                                <button class="btn btn-primary" id="btnKnow">
+                                    ✓ Je connais
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- MESSAGE DE FÉLICITATIONS (caché au départ) -->
+            <div class="completion-message" id="completionMessage" style="display: none;">
+                <div class="completion-content">
+                    <h2>🎉 Bravo !</h2>
+                    <p>Tu as révisé toutes les cartes de vocabulaire !</p>
+                    <p class="completion-stats">
+                        <strong id="reviewedCount">15</strong> termes révisés
+                    </p>
+                    <button class="btn btn-primary" id="btnRestart">
+                        🔄 Recommencer
+                    </button>
+                    <a href="../index.html#vocabulaire" class="btn btn-secondary">
+                        Retour à l'accueil
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+
+                <div class="footer-links">
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Conditions d'utilisation</a>
+                    <a href="#">Paramètres des cookies</a>
+                </div>
+
+                <p class="footer-copyright">© 2025 DevPath Junior. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

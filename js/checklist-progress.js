@@ -1,7 +1,7 @@
 
-// ============================================
-// AFFICHER LA PROGRESSION SUR INDEX.HTML
-// ============================================
+//* ============================================
+//* AFFICHER LA PROGRESSION SUR INDEX.HTML
+//* ============================================
 
 // Charge les données et affiche la progression
 function displayChecklistProgress() {
@@ -29,9 +29,9 @@ function displayChecklistProgress() {
 }
 
 
-// ============================================
-// CHARGER LE JSON (si pas de sauvegarde de localStorage)
-// ============================================
+//* ============================================
+//* CHARGER LE JSON (si pas de sauvegarde de localStorage)
+//* ============================================
 
 // Comme dans Checklist.js
 function loadChecklistData() {
@@ -49,9 +49,9 @@ function loadChecklistData() {
 }
 
 
-// ============================================
-// METTRE À JOUR L'AFFICHAGE
-// ============================================
+//* ============================================
+//* METTRE À JOUR L'AFFICHAGE
+//* ============================================
 
 // Comme dans checklist.js
 function updateProgressDisplay(checklistData) {
@@ -97,8 +97,8 @@ function updateProgressDisplay(checklistData) {
 }
 
 
-// ============================================
-// LANCER AU CHARGEMENT
-// ============================================
+//* ============================================
+//* LANCER AU CHARGEMENT
+//* ============================================
 
     displayChecklistProgress();

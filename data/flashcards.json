@@ -1,0 +1,233 @@
+{
+  "frontend": [
+    {
+      "id": 1,
+      "term": "HTML",
+      "definition": "HyperText Markup Language : langage de balisage qui structure le contenu d'une page web (titres, paragraphes, images, liens...)."
+    },
+    {
+      "id": 2,
+      "term": "CSS",
+      "definition": "Cascading Style Sheets : langage qui définit l'apparence visuelle d'une page web (couleurs, tailles, mise en page, animations...)."
+    },
+    {
+      "id": 3,
+      "term": "JavaScript",
+      "definition": "Langage de programmation qui permet de rendre une page web interactive et dynamique (gestion des événements, manipulation du contenu...)."
+    },
+    {
+      "id": 4,
+      "term": "DOM",
+      "definition": "Document Object Model : représentation en mémoire de la structure HTML d'une page web. Permet de manipuler les éléments avec JavaScript."
+    },
+    {
+      "id": 5,
+      "term": "Fonction",
+      "definition": "Bloc de code réutilisable qui effectue une tâche spécifique. On peut l'appeler plusieurs fois et lui passer des paramètres."
+    },
+    {
+      "id": 6,
+      "term": "Variable",
+      "definition": "Espace de stockage en mémoire qui contient une valeur (nombre, texte, objet...) et peut être utilisé dans le code."
+    },
+    {
+      "id": 7,
+      "term": "API",
+      "definition": "Application Programming Interface : interface qui permet à deux applications de communiquer entre elles via des requêtes."
+    },
+    {
+      "id": 8,
+      "term": "Responsive Design",
+      "definition": "Approche de design qui permet à un site web de s'adapter automatiquement à toutes les tailles d'écran (mobile, tablette, desktop)."
+    },
+    {
+      "id": 9,
+      "term": "Git",
+      "definition": "Système de gestion de versions qui permet de suivre l'historique des modifications d'un projet et de collaborer en équipe."
+    },
+    {
+      "id": 10,
+      "term": "Framework",
+      "definition": "Structure de base réutilisable qui fournit des outils et des conventions pour développer plus rapidement (ex: React, Vue.js)."
+    },
+    {
+      "id": 11,
+      "term": "SEO",
+      "definition": "Search Engine Optimization : ensemble de techniques pour améliorer la visibilité d'un site web dans les moteurs de recherche."
+    },
+    {
+      "id": 12,
+      "term": "Accessibilité",
+      "definition": "Pratique qui consiste à rendre un site web utilisable par tous, y compris les personnes en situation de handicap."
+    },
+    {
+      "id": 13,
+      "term": "Debugging",
+      "definition": "Processus de recherche et de correction des erreurs (bugs) dans le code à l'aide d'outils comme la console du navigateur."
+    },
+    {
+      "id": 14,
+      "term": "Événement",
+      "definition": "Action détectée par le navigateur (clic, saisie clavier, scroll...) qui peut déclencher l'exécution de code JavaScript."
+    },
+    {
+      "id": 15,
+      "term": "Navigateur",
+      "definition": "Logiciel (Chrome, Firefox, Safari...) qui interprète le code HTML, CSS et JavaScript pour afficher une page web."
+    }
+  ],
+  "backend": [
+    {
+      "id": 1,
+      "term": "JavaScript",
+      "definition": "Langage de programmation qui peut s'exécuter côté serveur (avec Node.js) pour créer des applications backend."
+    },
+    {
+      "id": 2,
+      "term": "Base de données",
+      "definition": "Système organisé pour stocker, gérer et récupérer des données de manière structurée (ex: MySQL, MongoDB)."
+    },
+    {
+      "id": 3,
+      "term": "Serveur",
+      "definition": "Ordinateur ou programme qui reçoit des requêtes des clients, les traite et renvoie des réponses (données, pages web...)."
+    },
+    {
+      "id": 4,
+      "term": "API",
+      "definition": "Application Programming Interface : permet à deux applications de communiquer entre elles en échangeant des données."
+    },
+    {
+      "id": 5,
+      "term": "Fonction",
+      "definition": "Bloc de code réutilisable qui effectue une tâche spécifique. On peut l'appeler plusieurs fois et lui passer des paramètres."
+    },
+    {
+      "id": 6,
+      "term": "Variable",
+      "definition": "Espace de stockage en mémoire qui contient une valeur (nombre, texte, objet...) et peut être utilisé dans le code."
+    },
+    {
+      "id": 7,
+      "term": "Authentification",
+      "definition": "Processus de vérification de l'identité d'un utilisateur (ex: login/password) avant de lui donner accès à des ressources."
+    },
+    {
+      "id": 8,
+      "term": "CRUD",
+      "definition": "Create, Read, Update, Delete : les 4 opérations de base pour gérer des données dans une application."
+    },
+    {
+      "id": 9,
+      "term": "SQL",
+      "definition": "Structured Query Language : langage pour interroger et manipuler des bases de données relationnelles."
+    },
+    {
+      "id": 10,
+      "term": "Git",
+      "definition": "Système de gestion de versions qui permet de suivre l'historique des modifications d'un projet et de collaborer en équipe."
+    },
+    {
+      "id": 11,
+      "term": "Framework",
+      "definition": "Structure de base réutilisable qui fournit des outils et des conventions pour développer plus rapidement (ex: Express, Django)."
+    },
+    {
+      "id": 12,
+      "term": "Requête HTTP",
+      "definition": "Demande envoyée par le client au serveur pour obtenir ou envoyer des données (GET, POST, PUT, DELETE...)."
+    },
+    {
+      "id": 13,
+      "term": "JSON",
+      "definition": "JavaScript Object Notation : format de données léger et lisible pour échanger des informations entre applications."
+    },
+    {
+      "id": 14,
+      "term": "Debugging",
+      "definition": "Processus de recherche et de correction des erreurs (bugs) dans le code à l'aide d'outils de développement."
+    },
+    {
+      "id": 15,
+      "term": "Algorithme",
+      "definition": "Suite d'instructions logiques et ordonnées pour résoudre un problème ou accomplir une tâche spécifique."
+    }
+  ],
+  "fullstack": [
+    {
+      "id": 1,
+      "term": "HTML",
+      "definition": "HyperText Markup Language : langage de balisage qui structure le contenu d'une page web (titres, paragraphes, images, liens...)."
+    },
+    {
+      "id": 2,
+      "term": "CSS",
+      "definition": "Cascading Style Sheets : langage qui définit l'apparence visuelle d'une page web (couleurs, tailles, mise en page, animations...)."
+    },
+    {
+      "id": 3,
+      "term": "JavaScript",
+      "definition": "Langage de programmation qui permet de rendre une page web interactive côté client, et de créer des serveurs côté backend."
+    },
+    {
+      "id": 4,
+      "term": "Client-Serveur",
+      "definition": "Architecture où le client (navigateur) envoie des requêtes au serveur qui traite et renvoie des réponses."
+    },
+    {
+      "id": 5,
+      "term": "API",
+      "definition": "Application Programming Interface : interface qui permet à deux applications de communiquer entre elles en échangeant des données."
+    },
+    {
+      "id": 6,
+      "term": "Base de données",
+      "definition": "Système organisé pour stocker, gérer et récupérer des données de manière structurée (ex: MySQL, MongoDB)."
+    },
+    {
+      "id": 7,
+      "term": "Git",
+      "definition": "Système de gestion de versions qui permet de suivre l'historique des modifications d'un projet et de collaborer en équipe."
+    },
+    {
+      "id": 8,
+      "term": "Framework",
+      "definition": "Structure de base réutilisable qui fournit des outils et des conventions pour développer plus rapidement."
+    },
+    {
+      "id": 9,
+      "term": "Fonction",
+      "definition": "Bloc de code réutilisable qui effectue une tâche spécifique. On peut l'appeler plusieurs fois et lui passer des paramètres."
+    },
+    {
+      "id": 10,
+      "term": "JSON",
+      "definition": "JavaScript Object Notation : format de données léger et lisible pour échanger des informations entre le client et le serveur."
+    },
+    {
+      "id": 11,
+      "term": "Requête HTTP",
+      "definition": "Demande envoyée par le client au serveur pour obtenir ou envoyer des données (GET, POST, PUT, DELETE...)."
+    },
+    {
+      "id": 12,
+      "term": "Responsive Design",
+      "definition": "Approche de design qui permet à un site web de s'adapter automatiquement à toutes les tailles d'écran."
+    },
+    {
+      "id": 13,
+      "term": "Debugging",
+      "definition": "Processus de recherche et de correction des erreurs (bugs) dans le code à l'aide d'outils de développement."
+    },
+    {
+      "id": 14,
+      "term": "Variable",
+      "definition": "Espace de stockage en mémoire qui contient une valeur (nombre, texte, objet...) et peut être utilisé dans le code."
+    },
+    {
+      "id": 15,
+      "term": "Déploiement",
+      "definition": "Action de mettre une application en production sur un serveur pour la rendre accessible aux utilisateurs finaux."
+    }
+  ]
+}
