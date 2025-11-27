@@ -1,0 +1,110 @@
+{
+  "general": [
+    {
+      "id": 1,
+      "question": "Parlez-moi de vous et de votre parcours",
+      "guidance": "💡 Mentionne : ta formation, ce qui t'a attiré vers le dev, tes compétences principales"
+    },
+    {
+      "id": 2,
+      "question": "Pourquoi avez-vous choisi le développement web ?",
+      "guidance": "💡 Parle de : ce qui te passionne, un déclic, ce que tu aimes dans ce métier"
+    },
+    {
+      "id": 3,
+      "question": "Présentez-moi un projet dont vous êtes fier",
+      "guidance": "💡 Explique : le contexte du projet, les technologies utilisées, ton rôle, les défis surmontés"
+    },
+    {
+      "id": 4,
+      "question": "Comment gérez-vous les bugs et les erreurs ?",
+      "guidance": "💡 Aborde : ta méthode de debugging, les outils que tu utilises (console, DevTools), comment tu cherches des solutions"
+    },
+    {
+      "id": 5,
+      "question": "Comment vous tenez-vous à jour technologiquement ?",
+      "guidance": "💡 Cite : les ressources que tu consultes (blogs, docs, YouTube), les communautés que tu suis, comment tu apprends"
+    }
+  ],
+  "frontend": [
+    {
+      "id": 6,
+      "question": "Expliquez la différence entre HTML, CSS et JavaScript",
+      "guidance": "💡 Dis : HTML structure le contenu, CSS gère l'apparence, JavaScript ajoute l'interactivité"
+    },
+    {
+      "id": 7,
+      "question": "Qu'est-ce que le responsive design et comment l'appliquez-vous ?",
+      "guidance": "💡 Mentionne : les media queries, les unités relatives (%, rem), le mobile-first, Flexbox/Grid"
+    },
+    {
+      "id": 8,
+      "question": "Comment optimisez-vous les performances d'un site web ?",
+      "guidance": "💡 Parle de : la compression des images, le lazy loading, la minification du code, le cache"
+    },
+    {
+      "id": 9,
+      "question": "Qu'est-ce que l'accessibilité web et pourquoi est-ce important ?",
+      "guidance": "💡 Explique : rendre le site utilisable par tous, balises sémantiques, attributs alt, navigation clavier, contrastes"
+    },
+    {
+      "id": 10,
+      "question": "Avez-vous déjà utilisé un framework JavaScript ? Lequel ?",
+      "guidance": "💡 Si oui : nomme-le (React, Vue...), explique ce qu'il apporte. Si non : dis que tu es prêt à apprendre"
+    }
+  ],
+  "backend": [
+    {
+      "id": 6,
+      "question": "Qu'est-ce qu'une API et comment fonctionne-t-elle ?",
+      "guidance": "💡 Explique : interface qui permet aux applications de communiquer, méthodes HTTP (GET, POST...), format JSON"
+    },
+    {
+      "id": 7,
+      "question": "Quelle est la différence entre SQL et NoSQL ?",
+      "guidance": "💡 Dis : SQL = bases relationnelles (tables), NoSQL = bases non relationnelles (documents). Cite des exemples (MySQL vs MongoDB)"
+    },
+    {
+      "id": 8,
+      "question": "Comment sécurisez-vous une application backend ?",
+      "guidance": "💡 Mentionne : l'authentification (JWT, sessions), la validation des données, le chiffrement, les injections SQL"
+    },
+    {
+      "id": 9,
+      "question": "Expliquez ce qu'est le CRUD",
+      "guidance": "💡 Détaille : Create (créer), Read (lire), Update (modifier), Delete (supprimer). Les 4 opérations de base sur les données"
+    },
+    {
+      "id": 10,
+      "question": "Comment gérez-vous les erreurs dans une API ?",
+      "guidance": "💡 Parle de : les codes HTTP (200, 404, 500...), les try/catch, les messages d'erreur clairs, les logs"
+    }
+  ],
+  "fullstack": [
+    {
+      "id": 6,
+      "question": "Quelle est la différence entre frontend et backend ?",
+      "guidance": "💡 Explique : frontend = ce que voit l'utilisateur (interface), backend = logique serveur et base de données"
+    },
+    {
+      "id": 7,
+      "question": "Comment une requête HTTP fonctionne-t-elle ?",
+      "guidance": "💡 Décris : le client envoie une requête au serveur, le serveur traite et renvoie une réponse (données, page...)"
+    },
+    {
+      "id": 8,
+      "question": "Qu'est-ce qu'une base de données et à quoi sert-elle ?",
+      "guidance": "💡 Dis : système qui stocke et organise les données de manière structurée. Cite des exemples (MySQL, MongoDB)"
+    },
+    {
+      "id": 9,
+      "question": "Expliquez le concept de REST API",
+      "guidance": "💡 Explique : architecture qui utilise les méthodes HTTP pour manipuler des ressources (GET, POST, PUT, DELETE)"
+    },
+    {
+      "id": 10,
+      "question": "Comment déployez-vous une application web ?",
+      "guidance": "💡 Mentionne : mettre le code sur un serveur, nom de domaine, hébergeurs (Vercel, Netlify, Heroku...), Git pour versionner"
+    }
+  ]
+}
