@@ -146,6 +146,11 @@
     border-color: var(--color-primary);
 }
 
+/* Boutton retour accueil */
+.return-home {
+    display: flex;
+    justify-content: center;
+}
 /* ============================================
    RESPONSIVE
    ============================================ */

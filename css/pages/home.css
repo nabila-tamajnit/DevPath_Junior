@@ -258,6 +258,9 @@ section {
    ============================================ */
 
 .entretien .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
@@ -277,11 +280,17 @@ section {
 
 .entretien-scene {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 900px;
-    margin: 0 auto var(--space-lg);
+    padding-top: 5rem;
+    /* margin: 0 auto var(--space-lg); */
 }
 
 .dialogue-bubbles {
+    position: absolute;
+    top: 0;
     display: flex;
     gap: var(--space-lg);
     margin-bottom: var(--space-lg);
@@ -346,10 +355,6 @@ section {
     font-size: 1.1rem;
 }
 
-.entretien-illustration {
-    margin-top: var(--space-xl);
-}
-
 .entretien-controls {
     display: flex;
     justify-content: center;
@@ -371,6 +376,7 @@ section {
     background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
     color: white;
     text-align: center;
+    min-height: 60vh;
 }
 
 .conclusion h2 {
@@ -383,6 +389,18 @@ section {
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.125rem;
     margin-bottom: var(--space-md);
+}
+
+.conclusion .btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.conclusion .btn-secondary:hover {
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+
 }
 
 /* ============================================
@@ -404,7 +422,6 @@ section {
     .hero .container,
     .section-content {
         flex-direction: column;
-        /* grid-template-columns: 1fr; */
         gap: var(--space-md);
     }
 
@@ -440,8 +457,13 @@ section {
     } */
     
     /* Bulles */
+
+    .entretien-scene {
+        padding-top: 0;
+    }
     .dialogue-bubbles {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        position: relative;
     }
     
     /* Vocabulaire */

@@ -5,17 +5,26 @@
 let deck = [];              // Le paquet de cartes
 let currentIndex = 0;       // Index de la carte actuelle
 let totalReviewed = 0;      // Nombre de cartes révisées
+let knowCount = 0;          // Nombre de cartes "Je connais"
+let reviewCount = 0;        // Nombre de cartes "À revoir"
 
 // Éléments HTML
+const profileTitle = document.getElementById('profileTitle');
+
+const progressCountElement = document.getElementById('progressCount');
+const totalCardsElement = document.getElementById('totalCards');
+const knowCountElement = document.getElementById('knowCount');
+const reviewCountElement = document.getElementById('reviewCount');
+const remainingCountElement = document.getElementById('remainingCount');
+
 const flashcard = document.getElementById('flashcard');
 const cardInner = document.getElementById('cardInner');
 const cardTerm = document.getElementById('cardTerm');
+const versoTerm = document.getElementById('versoTerm');
 const cardDefinition = document.getElementById('cardDefinition');
-const currentCardElement = document.getElementById('currentCard');
-const totalCardsElement = document.getElementById('totalCards');
-const profileTitle = document.getElementById('profileTitle');
 const btnKnow = document.getElementById('btnKnow');
 const btnReview = document.getElementById('btnReview');
+
 const completionMessage = document.getElementById('completionMessage');
 const reviewedCountElement = document.getElementById('reviewedCount');
 const btnRestart = document.getElementById('btnRestart');
@@ -46,6 +55,9 @@ function loadFlashcards() {
             // Récupérer les cartes du profil
             deck = data[userProfile];
 
+            // Sauvegarder le nombre total de cartes
+            totalCards = deck.length;
+
             console.log('Nombre de cartes :', deck.length);
 
             // Afficher le profil dans le titre
@@ -66,6 +78,8 @@ function loadFlashcards() {
 
             // Afficher la première carte
             displayCard();
+            // Mettre à jour les stats
+            updateStats();
         })
         .catch(function (error) {
             console.error('Erreur de chargement :', error);
@@ -91,30 +105,57 @@ function displayCard() {
 
     // Afficher le terme et la définition
     cardTerm.textContent = card.term;
+    versoTerm.textContent = card.term;
     cardDefinition.textContent = card.definition;
-
-    // Mettre à jour le compteur
-    currentCardElement.textContent = currentIndex + 1;
-    totalCardsElement.textContent = deck.length;
 
     console.log('Carte affichée :', card.term);
 }
 
 
 //* =============================================
-//* 3. RETOURNER LA CARTE (FLIP)
+//* METTRE À JOUR LES STATS
+//* =============================================
+
+function updateStats() {
+
+    if (progressCountElement) {
+        progressCountElement.textContent = knowCount;
+    }
+
+    if (totalCardsElement) {
+        totalCardsElement.textContent = totalCards;
+    }
+
+    if (knowCountElement) {
+        knowCountElement.textContent = knowCount;
+    }
+
+    if (reviewCountElement) {
+        reviewCountElement.textContent = reviewCount;
+    }
+
+    if (remainingCountElement) {
+        remainingCountElement.textContent = deck.length;
+    }
+
+    console.log('Stats : ', progressCount, '/', totalCards, '| Je connais:', knowCount, '| À revoir:', reviewCount, '| Restantes:', deck.length);
+}
+
+
+//* =============================================
+//* RETOURNER LA CARTE
 //* =============================================
 
 function flipCard() {
     console.log('Flip de la carte');
 
-    // Ajouter ou retirer la classe "flipped"
+    // Ajouter la classe "flipped"
     cardInner.classList.toggle('flipped');
 }
 
 
 //* =============================================
-//* 4. "JE CONNAIS" - RETIRER LA CARTE
+//* "JE CONNAIS" - RETIRER LA CARTE
 //* =============================================
 
 function knowCard() {
@@ -124,7 +165,7 @@ function knowCard() {
     deck.splice(currentIndex, 1);
 
     // Augmenter le compteur de cartes révisées
-    totalReviewed++;
+    knowCount++;
 
     // Si on était sur la dernière carte, revenir à l'index 0
     if (currentIndex >= deck.length && deck.length > 0) {
@@ -134,13 +175,17 @@ function knowCard() {
     // Retourner la carte avant d'afficher la suivante
     cardInner.classList.remove('flipped');
 
-    // Afficher la carte suivante
-    displayCard();
+    // mettre a jour les stats
+    updateStats();
+    // Afficher la carte suivante avec petit délai pour l'animation
+    setTimeout(function () {
+        displayCard();
+    }, 300);
 }
 
 
 //* =============================================
-//* 5. "À REVOIR" - REMETTRE LA CARTE À LA FIN
+//* "À REVOIR" - REMETTRE LA CARTE À LA FIN
 //* =============================================
 
 function reviewCard() {
@@ -155,6 +200,10 @@ function reviewCard() {
     // La remettre à la fin
     deck.push(currentCard);
 
+    // Augmenter le compteur "À revoir"
+    reviewCount++;
+    console.log('compteur review augmenté :', reviewCount)
+
     // Si on était sur la dernière carte, revenir à l'index 0
     if (currentIndex >= deck.length && deck.length > 0) {
         currentIndex = 0;
@@ -163,13 +212,17 @@ function reviewCard() {
     // Retourner la carte avant d'afficher la suivante
     cardInner.classList.remove('flipped');
 
-    // Afficher la carte suivante
-    displayCard();
+    // mettre a jour les stats
+    updateStats();
+    // Afficher la carte suivante avec petit délai pour l'animation
+    setTimeout(function () {
+        displayCard();
+    }, 300);
 }
 
 
 //* =============================================
-//* 6. AFFICHER LE MESSAGE DE FIN
+//* AFFICHER LE MESSAGE DE FIN
 //* =============================================
 
 function showCompletion() {
@@ -183,13 +236,13 @@ function showCompletion() {
 
     // Afficher le nombre de cartes révisées
     if (reviewedCountElement) {
-        reviewedCountElement.textContent = totalReviewed;
+        reviewedCountElement.textContent = totalCards;
     }
 }
 
 
 //* =============================================
-//* 7. RECOMMENCER LE JEU
+//* RECOMMENCER LE JEU
 //* =============================================
 
 function restartGame() {
