@@ -278,19 +278,24 @@ section {
     color: var(--text-gray);
 }
 
+#profileSubTitle {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
 .entretien-scene {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 900px;
-    padding-top: 7rem;
+    padding-top: 3.5rem;
     /* margin: 0 auto var(--space-lg); */
 }
 
 .dialogue-bubbles {
     position: absolute;
-    top: -5%;
+    top: 0;
     display: flex;
     gap: var(--space-lg);
     margin-bottom: var(--space-lg);
@@ -362,6 +367,10 @@ section {
 #questionCounter {
     font-weight: 600;
     color: var(--text-gray);
+}
+
+.entretien-finished {
+    margin-top: var(--space-lg);
 }
 
 /* ============================================

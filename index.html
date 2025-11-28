@@ -13,6 +13,7 @@
     <script defer src="js/main.js"></script>
     <script defer src="js/navbar.js"></script>
     <script defer src="js/checklist-progress.js"></script>
+    <script defer src="js/interview.js"></script>
 </head>
 
 <body>
@@ -215,7 +216,7 @@
             <div class="container">
                 <div class="entretien-header">
                     <h2>Prépare-toi aux entretiens</h2>
-                    <p>Entraîne-toi avec des questions fréquentes adaptées à ton profil</p>
+                    <p>Entraîne-toi avec des questions fréquentes adaptées à ton profil <span id="profileSubTitle">Frontend</span></p>
                 </div>
 
                 <div class="entretien-scene">
@@ -232,23 +233,19 @@
                             <p id="answerText">J'ai développé une application complète de gestion de tâches en React avec Redux pour l'état global, React Router pour la navigation, et une API REST en Node.js avec Express. J'ai aussi ajouté l'authentification JWT et des tests avec Jest.</p>
                         </div>
 
-                        
                     </div>
 
                     <img src="images/entretien-illustration.svg" alt="Illustration entretien">
-
-                    <div class="entretien-illustration">
-                        
-
-                        
-                    </div>
 
                 </div>
 
                 <div class="entretien-controls">
                     <button class="btn btn-secondary" id="prevQuestion">← Question précédente</button>
-                    <span id="questionCounter">Question 1/5</span>
+                    <span id="questionCounter">Question <span id="progressQuestionCount">0</span> / <span id="totalQuestionCount">20</span></span>
                     <button class="btn btn-primary" id="nextQuestion">Question suivante →</button>
+                </div>
+                <div class="entretien-finished" id="entretienFinished" style="display: none;">
+                    <button class="btn btn-primary" id="restart">Recommencer</button>
                 </div>
             </div>
         </section>

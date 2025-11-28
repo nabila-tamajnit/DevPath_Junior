@@ -7,104 +7,159 @@
     },
     {
       "id": 2,
-      "question": "Pourquoi avez-vous choisi le développement web ?",
-      "guidance": "💡 Parle de : ce qui te passionne, un déclic, ce que tu aimes dans ce métier"
+      "question": "Quelles sont vos principales qualités ?",
+      "guidance": "💡 Cite 2-3 qualités : rigoureux, curieux, autonome... Donne un exemple concret pour chacune"
     },
     {
       "id": 3,
-      "question": "Présentez-moi un projet dont vous êtes fier",
-      "guidance": "💡 Explique : le contexte du projet, les technologies utilisées, ton rôle, les défis surmontés"
+      "question": "Quel est votre principal défaut ?",
+      "guidance": "💡 Choisis un vrai défaut mais montre que tu travailles dessus. Ex : perfectionniste → j'apprends à prioriser"
     },
     {
       "id": 4,
-      "question": "Comment gérez-vous les bugs et les erreurs ?",
-      "guidance": "💡 Aborde : ta méthode de debugging, les outils que tu utilises (console, DevTools), comment tu cherches des solutions"
+      "question": "Pourquoi avez-vous choisi le développement web ?",
+      "guidance": "💡 Parle de : ce qui te passionne, un déclic, ce que tu aimes créer et résoudre"
     },
     {
       "id": 5,
-      "question": "Comment vous tenez-vous à jour technologiquement ?",
-      "guidance": "💡 Cite : les ressources que tu consultes (blogs, docs, YouTube), les communautés que tu suis, comment tu apprends"
+      "question": "Présentez-moi un projet dont vous êtes fier",
+      "guidance": "💡 Explique : le contexte, les technologies utilisées, ton rôle, les défis surmontés, le résultat"
+    }
+  ],
+  "motivation": [
+    {
+      "id": 6,
+      "question": "Pourquoi souhaitez-vous travailler dans notre entreprise ?",
+      "guidance": "💡 Fais des recherches avant : leurs projets, leurs valeurs, leurs technologies. Montre que tu connais l'entreprise"
+    },
+    {
+      "id": 7,
+      "question": "Qu'attendez-vous de ce poste ?",
+      "guidance": "💡 Parle de : apprendre, progresser, travailler en équipe, contribuer à des projets concrets"
+    },
+    {
+      "id": 8,
+      "question": "Où vous voyez-vous dans 5 ans ?",
+      "guidance": "💡 Montre ton ambition : développeur confirmé, lead dev, expert dans un domaine... Reste réaliste et cohérent"
+    },
+    {
+      "id": 9,
+      "question": "Que pouvez-vous apporter à l'entreprise ?",
+      "guidance": "💡 Mets en avant : tes compétences techniques, ta motivation, ta capacité à apprendre vite, ton esprit d'équipe"
+    },
+    {
+      "id": 10,
+      "question": "Comment gérez-vous le stress et les échecs ?",
+      "guidance": "💡 Explique ta méthode : prendre du recul, analyser, apprendre de l'erreur, demander de l'aide si besoin"
     }
   ],
   "frontend": [
     {
-      "id": 6,
+      "id": 11,
       "question": "Expliquez la différence entre HTML, CSS et JavaScript",
-      "guidance": "💡 Dis : HTML structure le contenu, CSS gère l'apparence, JavaScript ajoute l'interactivité"
+      "guidance": "💡 HTML structure le contenu, CSS gère l'apparence, JavaScript ajoute l'interactivité"
     },
     {
-      "id": 7,
-      "question": "Qu'est-ce que le responsive design et comment l'appliquez-vous ?",
-      "guidance": "💡 Mentionne : les media queries, les unités relatives (%, rem), le mobile-first, Flexbox/Grid"
+      "id": 12,
+      "question": "Qu'est-ce que le responsive design ?",
+      "guidance": "💡 Site qui s'adapte à tous les écrans. Mentionne : media queries, mobile-first, Flexbox/Grid"
     },
     {
-      "id": 8,
-      "question": "Comment optimisez-vous les performances d'un site web ?",
-      "guidance": "💡 Parle de : la compression des images, le lazy loading, la minification du code, le cache"
+      "id": 13,
+      "question": "Comment optimisez-vous les performances d'un site ?",
+      "guidance": "💡 Compression d'images, lazy loading, minification du code, cache navigateur"
     },
     {
-      "id": 9,
-      "question": "Qu'est-ce que l'accessibilité web et pourquoi est-ce important ?",
-      "guidance": "💡 Explique : rendre le site utilisable par tous, balises sémantiques, attributs alt, navigation clavier, contrastes"
+      "id": 14,
+      "question": "Qu'est-ce que l'accessibilité web ?",
+      "guidance": "💡 Rendre le site utilisable par tous. Balises sémantiques, alt sur images, navigation clavier, contrastes"
     },
     {
-      "id": 10,
-      "question": "Avez-vous déjà utilisé un framework JavaScript ? Lequel ?",
-      "guidance": "💡 Si oui : nomme-le (React, Vue...), explique ce qu'il apporte. Si non : dis que tu es prêt à apprendre"
+      "id": 15,
+      "question": "Avez-vous utilisé un framework JavaScript ?",
+      "guidance": "💡 Si oui : nomme-le et explique ce qu'il apporte. Si non : montre ta volonté d'apprendre"
+    }
+  ],
+  "practical": [
+    {
+      "id": 16,
+      "question": "Quelles sont vos prétentions salariales ?",
+      "guidance": "💡 Donne une fourchette basée sur le marché junior dans ta région. Ex : 'Entre X et Y selon responsabilités'"
+    },
+    {
+      "id": 17,
+      "question": "Comment vous tenez-vous à jour technologiquement ?",
+      "guidance": "💡 Cite : blogs tech, documentation officielle, YouTube, communautés (Discord, Reddit), projets perso"
+    },
+    {
+      "id": 18,
+      "question": "Comment gérez-vous les bugs et erreurs ?",
+      "guidance": "💡 Console, DevTools, lire l'erreur, rechercher (Stack Overflow, docs), reproduire le bug, tester des solutions"
+    },
+    {
+      "id": 19,
+      "question": "Préférez-vous travailler seul ou en équipe ?",
+      "guidance": "💡 Dis que tu apprécies les deux : autonomie pour coder, équipe pour apprendre et échanger. Donne un exemple"
+    },
+    {
+      "id": 20,
+      "question": "Avez-vous des questions pour nous ?",
+      "guidance": "💡 Prépare 2-3 questions : stack technique, méthodologie, équipe, opportunités d'évolution"
     }
   ],
   "backend": [
     {
-      "id": 6,
+      "id": 11,
       "question": "Qu'est-ce qu'une API et comment fonctionne-t-elle ?",
-      "guidance": "💡 Explique : interface qui permet aux applications de communiquer, méthodes HTTP (GET, POST...), format JSON"
+      "guidance": "💡 Interface entre applications. Méthodes HTTP (GET, POST, PUT, DELETE), format JSON, endpoints"
     },
     {
-      "id": 7,
-      "question": "Quelle est la différence entre SQL et NoSQL ?",
-      "guidance": "💡 Dis : SQL = bases relationnelles (tables), NoSQL = bases non relationnelles (documents). Cite des exemples (MySQL vs MongoDB)"
+      "id": 12,
+      "question": "Différence entre SQL et NoSQL ?",
+      "guidance": "💡 SQL = relationnel, tables liées (MySQL). NoSQL = flexible, documents (MongoDB). Chacun pour des cas d'usage"
     },
     {
-      "id": 8,
-      "question": "Comment sécurisez-vous une application backend ?",
-      "guidance": "💡 Mentionne : l'authentification (JWT, sessions), la validation des données, le chiffrement, les injections SQL"
+      "id": 13,
+      "question": "Comment sécurisez-vous une application ?",
+      "guidance": "💡 Authentification (JWT, sessions), validation des données, chiffrement, prévention injections SQL"
     },
     {
-      "id": 9,
+      "id": 14,
       "question": "Expliquez ce qu'est le CRUD",
-      "guidance": "💡 Détaille : Create (créer), Read (lire), Update (modifier), Delete (supprimer). Les 4 opérations de base sur les données"
+      "guidance": "💡 Create (créer), Read (lire), Update (modifier), Delete (supprimer). Les 4 opérations de base sur les données"
     },
     {
-      "id": 10,
+      "id": 15,
       "question": "Comment gérez-vous les erreurs dans une API ?",
-      "guidance": "💡 Parle de : les codes HTTP (200, 404, 500...), les try/catch, les messages d'erreur clairs, les logs"
+      "guidance": "💡 Codes HTTP (200, 404, 500), try/catch, messages clairs, logs pour débugger"
     }
   ],
+
   "fullstack": [
     {
-      "id": 6,
-      "question": "Quelle est la différence entre frontend et backend ?",
-      "guidance": "💡 Explique : frontend = ce que voit l'utilisateur (interface), backend = logique serveur et base de données"
+      "id": 11,
+      "question": "Différence entre frontend et backend ?",
+      "guidance": "💡 Frontend = interface utilisateur (ce qu'on voit). Backend = logique serveur et base de données"
     },
     {
-      "id": 7,
-      "question": "Comment une requête HTTP fonctionne-t-elle ?",
-      "guidance": "💡 Décris : le client envoie une requête au serveur, le serveur traite et renvoie une réponse (données, page...)"
+      "id": 12,
+      "question": "Comment fonctionne une requête HTTP ?",
+      "guidance": "💡 Client envoie une requête au serveur, serveur traite et renvoie une réponse (données, HTML...)"
     },
     {
-      "id": 8,
-      "question": "Qu'est-ce qu'une base de données et à quoi sert-elle ?",
-      "guidance": "💡 Dis : système qui stocke et organise les données de manière structurée. Cite des exemples (MySQL, MongoDB)"
+      "id": 13,
+      "question": "Qu'est-ce qu'une base de données ?",
+      "guidance": "💡 Système qui stocke et organise les données. Exemples : MySQL (SQL), MongoDB (NoSQL)"
     },
     {
-      "id": 9,
+      "id": 14,
       "question": "Expliquez le concept de REST API",
-      "guidance": "💡 Explique : architecture qui utilise les méthodes HTTP pour manipuler des ressources (GET, POST, PUT, DELETE)"
+      "guidance": "💡 Architecture qui utilise HTTP pour manipuler des ressources (GET, POST, PUT, DELETE)"
     },
     {
-      "id": 10,
+      "id": 15,
       "question": "Comment déployez-vous une application web ?",
-      "guidance": "💡 Mentionne : mettre le code sur un serveur, nom de domaine, hébergeurs (Vercel, Netlify, Heroku...), Git pour versionner"
+      "guidance": "💡 Hébergeur (Vercel, Netlify, Heroku), Git pour versionner, variables d'environnement, tests avant mise en prod"
     }
   ]
 }
