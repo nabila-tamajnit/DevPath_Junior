@@ -20,7 +20,7 @@ section {
 
 .timeline,
 .readme-preview,
-.entretien {
+.interview {
     background-color: var(--bg-white);
 }
 
@@ -257,23 +257,23 @@ section {
    SECTION ENTRETIEN
    ============================================ */
 
-.entretien .container {
+.interview .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-.entretien-header {
+.interview-header {
     margin-bottom: var(--space-xl);
 }
 
-.entretien-header h2 {
+.interview-header h2 {
     font-size: 2rem;
     margin-bottom: var(--space-sm);
 }
 
-.entretien-header p {
+.interview-header p {
     font-size: 1.125rem;
     color: var(--text-gray);
 }
@@ -283,7 +283,7 @@ section {
     font-weight: 700;
 }
 
-.entretien-scene {
+.interview-scene {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -356,7 +356,7 @@ section {
     font-size: 1rem;
 }
 
-.entretien-controls {
+.interview-controls {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -369,8 +369,22 @@ section {
     color: var(--text-gray);
 }
 
-.entretien-finished {
+.interview-finished {
     margin-top: var(--space-lg);
+    display: flex;
+    justify-content: center;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ============================================
@@ -463,7 +477,7 @@ section {
     
     /* Bulles */
 
-    .entretien-scene {
+    .interview-scene {
         padding-top: 0;
     }
     .dialogue-bubbles {
