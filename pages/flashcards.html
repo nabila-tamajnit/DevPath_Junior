@@ -53,84 +53,78 @@
     <main class="flashcards-page">
         <div class="container">
 
-            <!-- EN-TÊTE -->
+            <!-- Titre -->
             <header class="flashcards-header">
                 <h1>Flashcards - <span id="profileTitle">Frontend</span></h1>
                 <p>Clique sur la carte pour voir la définition</p>
-
-                <!-- Compteurs de progression -->
-                <div class="progress-stats">
-                    <div class="stat-item">
-                        <span class="stat-label">Progression</span>
-                        <span class="stat-value"><span id="progressCount">0</span> / <span
-                                id="totalCards">15</span></span>
-                    </div>
-                    <div class="stat-item stat-know">
-                        <span class="stat-label">✓ Je connais</span>
-                        <span class="stat-value" id="knowCount">0</span>
-                    </div>
-                    <div class="stat-item stat-review">
-                        <span class="stat-label">🔄 À revoir</span>
-                        <span class="stat-value" id="reviewCount">0</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-label">📚 Restantes</span>
-                        <span class="stat-value" id="remainingCount">15</span>
-                    </div>
-                </div>
-
-                <!-- ZONE DE LA CARTE -->
-                <div class="flashcard-container">
-
-                    <div class="flashcard" id="flashcard">
-                        <div class="card-inner" id="cardInner">
-
-                            <!-- RECTO -->
-                            <div class="card-front">
-                                <p class="card-label">Terme</p>
-                                <p class="card-term" id="cardTerm"></p> <!-- En js-->
-                                <p class="card-hint">Clique pour voir la définition</p>
-                            </div>
-
-                            <!-- VERSO -->
-                            <div class="card-back">
-                                <p class="verso-term" id="versoTerm"></p> <!-- En js-->
-                                <p class="card-label">Définition</p>
-                                <p class="card-definition" id="cardDefinition"></p> <!-- En js-->
-
-                                <!-- Boutons d'action (verso) -->
-                                <div class="card-actions">
-                                    <button class="btn btn-secondary" id="btnReview">
-                                        🔄 À revoir
-                                    </button>
-                                    <button class="btn btn-primary" id="btnKnow">
-                                        ✓ Je connais
-                                    </button>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-                    <!-- MESSAGE DE FÉLICITATIONS (caché au départ) -->
-                    <div class="completion-message" id="completionMessage" style="display: none;">
-                        <div class="completion-content">
-                            <h2>🎉 Bravo !</h2>
-                            <p>Tu as révisé toutes les cartes de vocabulaire !</p>
-                            <p class="completion-stats">
-                                <strong id="reviewedCount">15</strong> termes révisés
-                            </p>
-                            <button class="btn btn-primary" id="btnRestart">
-                                🔄 Recommencer
-                            </button>
-                            <a href="../index.html#vocabulaire" class="btn btn-secondary">
-                                Retour à l'accueil
-                            </a>
-                        </div>
-                    </div>
-                </div>
             </header>
+
+            <!-- progression -->
+            <div class="progress-stats">
+                <div class="stat-item">
+                    <span class="stat-label">Progression</span>
+                    <span class="stat-value"><span id="progressCount">0</span> / <span id="totalCards">15</span></span>
+                </div>
+                <div class="stat-item stat-know">
+                    <span class="stat-label">✓ Je connais</span>
+                    <span class="stat-value" id="knowCount">0</span>
+                </div>
+                <div class="stat-item stat-review">
+                    <span class="stat-label">🔄 À revoir</span>
+                    <span class="stat-value" id="reviewCount">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">📚 Restantes</span>
+                    <span class="stat-value" id="remainingCount">15</span>
+                </div>
+            </div>
+
+            <!-- ZONE CARTE -->
+            <div class="flashcard-container">
+
+                <div class="flashcard" id="flashcard">
+                    <div class="card-inner" id="cardInner">
+
+                        <!-- RECTO -->
+                        <div class="card-front">
+                            <p class="card-label">Terme</p>
+                            <p class="card-term" id="cardTerm"></p> <!-- JS -->
+                            <p class="card-hint">Clique pour voir la définition</p>
+                        </div>
+
+                        <!-- VERSO -->
+                        <div class="card-back">
+                            <p class="verso-term" id="versoTerm"></p> <!-- JS -->
+                            <p class="card-label">Définition</p>
+                            <p class="card-definition" id="cardDefinition"></p> <!-- JS -->
+
+                            <!-- Boutons (verso) -->
+                            <div class="card-actions">
+                                <button class="btn btn-secondary" id="btnReview">🔄 À revoir</button>
+                                <button class="btn btn-primary" id="btnKnow">✓ Je connais</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- MESSAGE DE FÉLICITATIONS (caché au départ) -->
+                <div class="completion-message" id="completionMessage" style="display: none;">
+                    <div class="completion-content">
+                        <h2>🎉 Bravo !</h2>
+                        <p>Tu as révisé toutes les cartes de vocabulaire !</p>
+                        <p class="completion-stats">
+                            <strong id="reviewedCount">15</strong> termes révisés
+                        </p>
+                        <button class="btn btn-primary" id="btnRestart">Recommencer</button>
+                        <a href="../index.html#vocabulaire" class="btn btn-secondary">
+                            Retour à l'accueil
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
 

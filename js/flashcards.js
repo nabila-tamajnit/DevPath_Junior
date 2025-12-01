@@ -2,34 +2,34 @@
 //* VARIABLES GLOBALES
 //* =============================================
 
-let deck = [];              // Le paquet de cartes
-let currentIndex = 0;       // Index de la carte actuelle
-let totalReviewed = 0;      // Nombre de cartes révisées
-let knowCount = 0;          // Nombre de cartes "Je connais"
-let reviewCount = 0;        // Nombre de cartes "À revoir"
+// ------ Éléments qui évolues -----
+let deck = []; // tableau cartes
+let currentIndex = 0; // Index carte actuelle
+let totalReviewed = 0; // cartes révisées
+let knowCount = 0; // cartes Je connais
+let reviewCount = 0; // cartes À revoir
 
-// Éléments HTML
+// ----- Éléments HTML -----
 const profileTitle = document.getElementById('profileTitle');
-
+// Progression
 const progressCountElement = document.getElementById('progressCount');
 const totalCardsElement = document.getElementById('totalCards');
 const knowCountElement = document.getElementById('knowCount');
 const reviewCountElement = document.getElementById('reviewCount');
 const remainingCountElement = document.getElementById('remainingCount');
-
+// Zone jeu
 const flashcard = document.getElementById('flashcard');
 const cardInner = document.getElementById('cardInner');
 const cardTerm = document.getElementById('cardTerm');
+// carte verso
 const versoTerm = document.getElementById('versoTerm');
 const cardDefinition = document.getElementById('cardDefinition');
 const btnKnow = document.getElementById('btnKnow');
 const btnReview = document.getElementById('btnReview');
-
+// message fin
 const completionMessage = document.getElementById('completionMessage');
 const reviewedCountElement = document.getElementById('reviewedCount');
 const btnRestart = document.getElementById('btnRestart');
-
-console.log('Flashcards JS chargé');
 
 
 //* =============================================
@@ -55,7 +55,7 @@ function loadFlashcards() {
             // Récupérer les cartes du profil
             deck = data[userProfile];
 
-            // Sauvegarder le nombre total de cartes
+            // Sauvegarder le total de cartes
             totalCards = deck.length;
 
             console.log('Nombre de cartes :', deck.length);
