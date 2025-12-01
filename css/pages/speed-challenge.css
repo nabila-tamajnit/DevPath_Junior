@@ -1,0 +1,71 @@
+.speed-challenge-page {
+    min-height: 100vh;
+    padding: var(--space-lg) 0;
+    background-color: var(--bg-light);
+}
+
+/* ============================================
+   EN-TÊTE
+   ============================================ */
+
+.speed-challenge-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.speed-challenge-header h1 {
+    font-size: 2rem;
+    margin-bottom: var(--space-sm);
+    color: var(--text-dark);
+}
+
+.speed-challenge-header p {
+    font-size: 1rem;
+    color: var(--text-gray);
+    margin-bottom: var(--space-md);
+}
+
+/* ============================================
+   DÉMARRAGE
+   ============================================ */
+
+.challenge-start {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.start-card {
+    padding: var(--space-xl);
+    background-color: var(--bg-white);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.start-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    background-color: var(--bg-light);
+    border-radius: var(--radius-sm);
+}
+
+.info-emoji {
+    font-size: 1.5rem;
+    flex-shrink: 0; /* rétrécit pas */
+}
+
+.info-text {
+    font-size: 1rem;
+    color: var(--text-dark);
+    font-weight: 500;
+    text-align: left;
+}

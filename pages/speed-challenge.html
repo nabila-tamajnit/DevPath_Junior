@@ -51,95 +51,89 @@
     <main class="speed-challenge-page">
         <div class="container">
 
+            <!-- HEADER -->
+             <header class="speed-challenge-header">
+                <h1>Speed Challenge - <span id="profileTitle">Frontend</span></h1>
+                <p class="challenge-description">Trouve la bonne définition parmi 3 choix !</p>
+            </header>
+
             <!-- DÉMARRAGE -->
             <div class="challenge-start" id="challengeStart">
-                <div class="start-content">
-                    <h1>Speed Challenge - <span id="profileTitle">Frontend</span></h1>
-                    <p class="start-description">Teste tes connaissances avec un QCM chronométré !</p>
-                    
+                
+                <!-- CARTE AVEC INFOS -->
+                <div class="start-card">
                     <div class="start-info">
                         <div class="info-item">
-                            <span class="info-icon">📚</span>
-                            <span class="info-text"><strong id="startTotalQuestions">15</strong> questions</span>
+                            <span class="info-emoji">📚</span>
+                            <span class="info-text"><span id="startTotalQuestions">15</span> questions</span>
                         </div>
                         <div class="info-item">
-                            <span class="info-icon">⏱️</span>
-                            <span class="info-text"><strong>20</strong> secondes par question</span>
+                            <span class="info-emoji">⏱️</span>
+                            <span class="info-text">20 secondes par question</span>
                         </div>
                         <div class="info-item">
-                            <span class="info-icon">🎯</span>
-                            <span class="info-text">Trouve la bonne définition</span>
+                            <span class="info-emoji">🎯</span>
+                            <span class="info-text">Réponse rapide = plus de points</span>
                         </div>
                     </div>
 
-                    <button class="btn btn-primary btn-large" id="startButton">Commencer le challenge</button>
-
-                    <p class="start-note">Prêt ? Clique pour lancer le chrono !</p>
+                    <button class="btn btn-primary" id="startButton">
+                        Commencer le challenge
+                    </button>
                 </div>
+
             </div>
 
             <!-- ZONE DE JEU -->
             <div class="challenge-game" id="challengeGame" style="display: none;">
 
-                <!-- HEADER DU JEU -->
-                <div class="game-header">
-                    <div class="question-counter">
-                        Question <strong id="currentQuestion">1</strong> / <strong id="totalQuestions">15</strong>
-                    </div>
-                    
-                    <!-- TIMER -->
-                    <div class="timer-compact" id="timerCompact">
-                        <span class="timer-label">Temps restant</span>
-                        <span class="timer-value" id="timerText">20</span>
-                    </div>
+                <!-- TIMER -->
+                <div class="timer-circle" id="timerCircle">
+                    <span class="timer-number" id="timerText">20</span>
                 </div>
 
-                <!-- QUESTION + RÉPONSES -->
-                <div class="game-content">
-                    
-                    <!-- CARTE QUESTION -->
-                    <div class="question-card">
-                        <p class="question-label">Trouve la définition de :</p>
-                        <h2 class="question-term" id="questionTerm">API</h2>
-                    </div>
-
-                    <!-- CHOIX DE RÉPONSES -->
-                    <div class="answers-grid" id="answersGrid">
-                        <!-- JS -->
-                    </div>
-
+                <!-- QUESTION -->
+                <div class="question-card">
+                    <p class="question-label">Trouve la définition de :</p>
+                    <h2 class="question-term" id="questionTerm">API</h2>
                 </div>
 
-                <!-- PROGRESSION -->
-                <div class="challenge-progress">
+                <!-- RÉPONSES -->
+                <div class="answers-list" id="answersList">
+                    <!-- JS -->
+                </div>
+
+                <!-- PROGRESSION + COMPTEUR -->
+                <div class="game-progress">
                     <div class="progress-bar">
-                        <div class="progress-fill" id="progressFill"></div>
+                        <div class="progress-fill" id="progressFill"></div> <!-- JS -->
                     </div>
+                    <p class="progress-count">
+                        Question <span id="currentQuestion">1</span> / <span id="totalQuestions">15</span>
+                    </p>
                 </div>
 
             </div>
 
             <!-- MESSAGE DE FIN -->
             <div class="challenge-finished" id="challengeFinished" style="display: none;">
-                <div class="finished-content">
-                    <h2 id="finishedTitle">🎉 Défi terminé !</h2>
-                    <p id="finishedMessage">Tu as bien révisé !</p>
-                    
-                    <div class="score-display">
-                        <div class="score-item">
-                            <span class="score-label">Score</span>
-                            <span class="score-value" id="finalScore">12 / 15</span>
-                        </div>
-                        <div class="score-item">
-                            <span class="score-label">Pourcentage</span>
-                            <span class="score-value" id="percentage">80%</span>
-                        </div>
+                <h2 id="finishedTitle">🎉 Défi terminé !</h2>
+                <p id="finishedMessage">Tu as bien révisé !</p>
+                
+                <div class="score-results">
+                    <div class="score-box">
+                        <span class="score-label">Score</span>
+                        <span class="score-value" id="finalScore">12 / 15</span>
                     </div>
+                    <div class="score-box">
+                        <span class="score-label">Pourcentage</span>
+                        <span class="score-value" id="percentage">80%</span>
+                    </div>
+                </div>
 
-                    <div class="finished-actions">
-                        <button class="btn btn-primary" id="restartChallenge">Recommencer</button>
-                        <a href="../index.html#vocabulaire" class="btn btn-secondary">Retour à l'accueil</a>
-                    </div>
+                <div class="finished-buttons">
+                    <button class="btn btn-primary" id="restartChallenge">Recommencer</button>
+                    <a href="../index.html#vocabulaire" class="btn btn-secondary">Retour à l'accueil</a>
                 </div>
             </div>
 
