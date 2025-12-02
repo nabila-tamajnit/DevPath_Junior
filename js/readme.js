@@ -593,7 +593,7 @@ function copyMarkdown() {
         return; // Arrète la fontion
     }
 
-    // Copier dans le presse-papier avec l'API du navigateur
+    // Copier avec l'API du navigateur
     navigator.clipboard.writeText(generatedMarkdown)
 
     .then(function() {
@@ -625,7 +625,7 @@ function copyMarkdown() {
 generateButton.addEventListener('click', function(){
     console.log('Bouton "Générer" cliqué');
 
-    // Récupérer les données du formulaire que j'ai collecté dans la fonction collectFormData()
+    // Récupérer les données du formulaire
     const userData = collectFormData();
 
     // Si pas au moins le nom, pas de readme
@@ -666,7 +666,7 @@ styleRadios.forEach(function(radio) {
     radio.addEventListener('change', function() {
         console.log('Style changé :', radio.value);
 
-        // Si un README a déjà été généré
+        // Si README généré
         if (generateMarkdown) {
             // Collecter les données
             const userData = collectFormData();

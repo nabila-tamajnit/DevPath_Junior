@@ -9,23 +9,23 @@ html {
 }
 
 /* ============================================
-    VARIABLES CSS - Couleurs et espacements
+    VARIABLES CSS - Couleurs et espaces
    ============================================ */
 
 :root {
     /* Couleurs principales */
-    --color-primary: #3B5FC6;        /* Bleu pour les boutons */
-    --color-secondary: #8B5CF6;      /* Violet pour les accents */
+    --color-primary: #3B5FC6;
+    --color-secondary: #8B5CF6;
     
     /* Couleurs de fond */
     --bg-white: #FFFFFF;
-    --bg-light: #F9FAFB;             /* Gris très clair */
-    --bg-gray: #F3F4F6;              /* Gris clair */
+    --bg-light: #F9FAFB;
+    --bg-gray: #F3F4F6;
     
     /* Couleurs de texte */
-    --text-dark: #1F2937;            /* Presque noir */
-    --text-gray: #6B7280;            /* Gris moyen */
-    --text-light: #9CA3AF;           /* Gris clair */
+    --text-dark: #1F2937;
+    --text-gray: #6B7280;
+    --text-light: #9CA3AF;
     
     /* Espacements */
     --space-xs: 8px;

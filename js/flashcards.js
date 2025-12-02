@@ -214,7 +214,7 @@ function reviewCard() {
 
     // mettre a jour les stats
     updateStats();
-    // Afficher la carte suivante avec petit délai pour l'animation
+    // Afficher la carte suivante avec délai pour l'animation
     setTimeout(function () {
         displayCard();
     }, 300);

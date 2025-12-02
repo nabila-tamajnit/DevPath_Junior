@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Générateur de README - DevPath Junior</title>
 
-    <!-- Tes CSS existants -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/pages/readme.css">
@@ -14,7 +13,6 @@
     <!-- Librairie Marked.js pour convertir markdown → HTML -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-    <!-- Ton JS -->
     <script defer src="../js/navbar.js"></script>
     <script defer src="../js/readme.js"></script>
 </head>
@@ -62,12 +60,10 @@
                 <p>Crée un README professionnel en quelques clics</p>
             </header>
 
-            <!-- CONTENU PRINCIPAL : Formulaire puis Preview -->
+            <!-- CONTENU PRINCIPAL -->
             <div class="readme-content">
 
-                <!-- ============================================
-                     FORMULAIRE
-                     ============================================ -->
+                <!-- FORMULAIRE -->
                 <div class="readme-form">
 
                     <!-- Message d'instruction -->
@@ -261,7 +257,7 @@
                         </div>
                     </section>
 
-                    <!-- 9. STATS GITHUB (OPTIONNEL) -->
+                    <!-- 9. STATS GITHUB -->
                     <section class="form-section">
                         <h2>📊 Stats GitHub</h2>
 
@@ -311,21 +307,19 @@
 
                 </div>
 
-                <!-- ============================================
-                     PREVIEW (APPARAÎT APRÈS GÉNÉRATION)
-                     ============================================ -->
+                <!-- PREVIEW (caché au debut) -->
                 <div class="readme-preview" id="readmePreview" style="display: none;">
 
                     <div class="preview-header">
                         <h2>Aperçu du README</h2>
                     </div>
 
-                    <!-- Zone où le markdown sera converti en HTML -->
+                    <!-- Zone où le markdown -> HTML -->
                     <div class="preview-content" id="previewContent">
-                        <!-- Le contenu sera généré en JavaScript -->
+                        <!-- JS -->
                     </div>
 
-                    <!-- Footer avec bouton Copier -->
+                    <!-- Footer bouton Copier -->
                     <div class="preview-footer">
                         <button class="btn btn-primary" id="copyButton">
                             📋 Copier le code markdown
@@ -352,9 +346,9 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-links">
-                    <a href="#">Politique de confidentialité</a>
-                    <a href="#">Conditions d'utilisation</a>
-                    <a href="#">Paramètres des cookies</a>
+                    <a href="">Politique de confidentialité</a>
+                    <a href="">Conditions d'utilisation</a>
+                    <a href="">Paramètres des cookies</a>
                 </div>
                 <p class="footer-copyright">© 2025 DevPath Junior. Tous droits réservés.</p>
             </div>

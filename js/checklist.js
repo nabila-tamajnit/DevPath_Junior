@@ -28,7 +28,7 @@ function loadChecklist() {
     // Télécharger le fichier JSON
     fetch('../data/checklist.json')
 
-        // Quand le fichier est chargé, le transformer en objet JavaScript
+        // Quand le fichier est chargé, le transformer en objet JS
         .then(function (response) {
             console.log('Fichier chargé !');
             return response.json();
@@ -84,13 +84,13 @@ function displayChecklist() {
         // Pour chaque tâche de cette catégorie
         category.tasks.forEach(function (task) {
 
-            // Créer l'élément HTML de la tâche
+            // Créer la tâche
             const taskDiv = createTaskElement(task);
 
             categoryDiv.appendChild(taskDiv);
         });
 
-        // Ajouter la catégorie dans le container principal
+        // Ajouter dans le container principal
         checklistContainer.appendChild(categoryDiv);
     });
 
@@ -292,7 +292,7 @@ function loadSavedData() {
     // Transformer le texte en objet
     const savedData = JSON.parse(savedDataString);
 
-    // Fusionner : garder les tâches du JSON, mais récupérer les états sauvegardés
+    // Fusionner : garder les tâches du JSON, mais récupérer les sauvegardes
     checklistData.categories.forEach(function (category, catIndex) {
         category.tasks.forEach(function (task, taskIndex) {
 
@@ -320,8 +320,8 @@ function loadSavedData() {
 
 function calculateProgress() {
 
-    let total = 0;        // Nombre total de tâches
-    let completed = 0;    // Nombre de tâches complétées
+    let total = 0;  // total de tâches
+    let completed = 0;  // de tâches complétées
 
     // Compter toutes les tâches
     checklistData.categories.forEach(function (category) {

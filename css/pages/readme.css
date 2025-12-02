@@ -25,7 +25,7 @@
 }
 
 /* ============================================
-   LAYOUT : VERTICAL
+   CONTENU
    ============================================ */
 
 .readme-content {
@@ -111,7 +111,7 @@
     box-sizing: border-box;
 }
 
-/* FIX TEXTAREA : Force la largeur à 100% */
+/* FIX TEXTAREA */
 .form-group textarea {
     resize: vertical;
     min-height: 100px;
@@ -133,7 +133,7 @@
     color: var(--text-light);
 }
 
-/* --- TEXTE D'AIDE (HINTS) --- */
+/* --- TEXTE D'AIDE --- */
 
 .form-hint {
     font-size: 0.875rem;
@@ -142,7 +142,7 @@
     font-style: italic;
 }
 
-/* --- FORM-ROW (2 champs côte à côte avec FLEXBOX) --- */
+/* --- FORM-ROW --- */
 
 .form-row {
     display: flex;
@@ -173,7 +173,7 @@
     margin-bottom: 0;
 }
 
-/* --- CHECKBOX POUR STATS GITHUB --- */
+/* --- STATS GITHUB --- */
 
 .checkbox-label {
     display: flex;
@@ -191,7 +191,7 @@
     flex-shrink: 0;
 }
 
-/* --- CHOIX DE STYLE (RADIO BUTTONS avec FLEXBOX) --- */
+/* --- CHOIX DE STYLE --- */
 
 .style-choices {
     display: flex;
@@ -292,7 +292,7 @@
     overflow-y: auto;
 }
 
-/* Style du contenu markdown converti en HTML */
+/* contenu markdown converti en HTML */
 .preview-content h1 {
     font-size: 2.5rem;
     margin-bottom: var(--space-lg);
@@ -358,7 +358,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Style pour les badges GitHub (images inline) */
+/* badges GitHub */
 .preview-content p img {
     display: inline-block;
     margin: 0 4px;
@@ -403,35 +403,35 @@
    ============================================ */
 
 @media (max-width: 768px) {
-    /* Container prend toute la largeur sur mobile */
+    /* Container */
     .readme-content {
         max-width: 100%;
     }
     
-    /* Formulaire et preview avec moins de padding */
+    /* Formulaire et preview */
     .readme-form,
     .preview-content {
         padding: var(--space-lg);
     }
     
-    /* Form-row passe en colonne */
+    /* Form-row */
     .form-row {
         flex-direction: column;
     }
     
-    /* Les styles options passent en colonne */
+    /* Les styles */
     .style-choices {
         flex-direction: column;
     }
     
-    /* Boutons prennent plus de largeur sur mobile */
+    /* Boutons */
     .form-actions .btn,
     .preview-footer .btn {
         min-width: 100%;
         max-width: 100%;
     }
     
-    /* Titres plus petits */
+    /* Titres */
     .readme-header h1 {
         font-size: 2rem;
     }
@@ -452,7 +452,7 @@
         font-size: 1.25rem;
     }
     
-    /* Preview header en colonne sur mobile */
+    /* Preview header  */
     .preview-header {
         flex-direction: column;
         align-items: flex-start;
