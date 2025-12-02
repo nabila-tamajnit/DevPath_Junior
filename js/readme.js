@@ -280,15 +280,16 @@ function generateProfessionalStyle(data) {
             md += `[LinkedIn](${data.linkedin})`;
         }
 
-        md = '\n\n';
+        md += '\n\n';
     }
 
     //? >>>----- STATS GITHUB -----<<<
     if (data.includeStats && data.github) {
+        // https://streak-stats.demolab.com/?user=${data.github}&theme=dark
+        // https://kasroudra-stats-card.onrender.com/user?user=${data.github}&layout=compact
         md += `## 📊 Statistiques GitHub\n\n`
 
-        md += `![Stats GitHub](https://github-readme-stats.vercel.app/api?username=${data.github}&show_icons=true&theme=radical)\n\n`;
-        md += `![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=${data.github}&layout=compact&theme=radical)\n\n`;
+        md += `![Stats GitHub](https://github-readme-stats.zcy.dev/api?username=${data.github})\n\n`;
     }
 
     return md;
@@ -428,7 +429,7 @@ function generateCreativeStyle(data) {
     if (data.includeStats && data.github) {
         md += `## 📊 Mes stats GitHub\n\n`;
 
-        md += `![Mes stats](https://github-readme-stats.vercel.app/api?username=${data.github}&show_icons=true&theme=tokyonight)\n\n`;
+        md += `![Mes stats](https://github-readme-stats.zcy.dev/api?username=${data.github})\n\n`;
     }
 
     md += `---\n\n`;
@@ -549,8 +550,7 @@ function generateMinimalistStyle(data) {
     if (data.includeStats && data.github) {
         md += `## 📊 Statistiques GitHub\n\n`
 
-        md += `![Stats GitHub](https://github-readme-stats.vercel.app/api?username=${data.github}&show_icons=true&theme=radical)\n\n`;
-        md += `![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=${data.github}&layout=compact&theme=radical)\n\n`;
+        md += `![Stats GitHub](https://github-readme-stats.zcy.dev/api?username=${data.github})\n\n`;
     }
 
     return md;

@@ -147,3 +147,5 @@ profileOptions.forEach(function(button) {
         window.location.reload();
     });
 });
+
+// Ajouter mode sombre : au click sur sombre, ajouter la class dark a body, puis faire toutes les modifications en css, pour les hero dans l'index, vaut mieux mettre non repeat pour l'image bg et aussi chager la couleur de l'image bg

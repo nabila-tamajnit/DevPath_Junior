@@ -88,7 +88,8 @@
     width: 100%;
     max-width: 600px;
     height: 400px;
-    perspective: 1000px; /* Effet 3D */
+    perspective: 1000px;
+    /* Effet 3D */
     cursor: pointer;
 }
 
@@ -167,7 +168,8 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden; /* Cache la face arrière quand elle est tournée */
+    backface-visibility: hidden;
+    /* Cache la face arrière quand elle est tournée */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -222,6 +224,7 @@
 }
 
 .card-back .verso-term {
+    text-align: center;
     font-size: 2rem;
     font-weight: 700;
     color: var(--color-primary);
@@ -274,6 +277,9 @@
 }
 
 .completion-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--bg-white);
     border-radius: var(--radius-lg);
     padding: var(--space-xl);
@@ -345,7 +351,7 @@
     /* Carte */
     .flashcard {
         max-width: 100%;
-        height: 350px;
+        height: 450px;
     }
 
     /* Moins de décalage */
@@ -361,8 +367,13 @@
         font-size: 2rem;
     }
 
+    .card-back .card-label {
+        margin-bottom: var(--space-xs);
+    }
+
     .card-back .card-definition {
         font-size: 1rem;
+        margin-bottom: var(--space-sm);
     }
 
     /* Boutons en colonne */

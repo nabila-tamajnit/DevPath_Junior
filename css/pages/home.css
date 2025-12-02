@@ -1,8 +1,7 @@
-
 /* ============================================
    TOUTES LES SECTIONS
    ============================================ */
-   
+
 section {
     min-height: 100vh;
     display: flex;
@@ -11,11 +10,18 @@ section {
 }
 
 .hero {
-    background: linear-gradient(135deg, var(--bg-light) 0%, #EEF2FF 100%);
-    background-image: url(../../images/hero-bg\(8\).svg);
+    background: url(../../images/hero-bg\(8\).svg), white;
+    /* background: linear-gradient(135deg, var(--bg-light) 0%, #EEF2FF 100%);
+    background-image: url(../../images/hero-bg\(8\).svg); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+
+}
+
+body.dark .hero {
+    background: url(../../images/hero-bg\(8\).svg) no-repeat, #2f3547;
 }
 
 .timeline,
@@ -377,11 +383,12 @@ section {
 }
 
 @keyframes fadeIn {
-    from { 
+    from {
         opacity: 0;
         transform: translateY(10px);
     }
-    to { 
+
+    to {
         opacity: 1;
         transform: translateY(0);
     }
@@ -426,17 +433,29 @@ section {
    RESPONSIVE
    ============================================ */
 
+/* Grand écran */
+@media (min-width: 1200px) {
+
+    .hero .container,
+    .readme-preview .container,
+    .checklist-preview .container {
+        max-width: 1450px;
+    }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
 
     .hero {
         background-image: url(../../images/hero-bg_mobile\(2\).svg);
     }
+
     /* Sections */
     section {
         min-height: auto;
         padding: var(--space-lg) 0;
     }
-    
+
     /* Hero et sections */
     .hero .container,
     .section-content {
@@ -446,6 +465,12 @@ section {
 
     .checklist-preview .container .section-content {
         flex-direction: column-reverse;
+
+        .progress-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     /* .section-content {
@@ -469,32 +494,41 @@ section {
     .timeline-step {
         margin-bottom: var(--space-md);
     }
-    
+
     /* .section-content.reverse .section-image,
     .section-content.reverse .section-text {
         order: 0;
     } */
-    
+
     /* Bulles */
 
     .interview-scene {
         padding-top: 0;
     }
+
     .dialogue-bubbles {
         flex-direction: column;
         position: relative;
     }
-    
+
+    .interview-controls {
+        gap: var(--space-xs);
+
+        .btn {
+            padding: 6px;
+        }
+    }
+
     /* Vocabulaire */
     .vocab-cards {
         grid-template-columns: 1fr;
     }
-    
+
     /* Titres */
     h1 {
         font-size: 2rem;
     }
-    
+
     h2 {
         font-size: 1.5rem;
     }

@@ -148,16 +148,18 @@
                         <h2>Suis ta progression</h2>
                         <p>Une checklist complète pour ne rien oublier dans ta préparation</p>
 
-                        <div class="progress-circle">
-                            <span id="progressPercentage">0%</span>
+                        <div class="progress-container">
+                            <div class="progress-circle">
+                                <span id="progressPercentage">0%</span>
+                            </div>
+
+                            <p class="progress-details">
+                                <span id="homeCompletedCount">0</span> / <span id="homeTotalCount">0</span> tâches
+                                complétées
+                            </p>
+
+                            <a href="pages/checklist.html" class="btn btn-primary">Voir ma checklist</a>
                         </div>
-
-                        <p class="progress-details">
-                            <span id="homeCompletedCount">0</span> / <span id="homeTotalCount">0</span> tâches
-                            complétées
-                        </p>
-
-                        <a href="pages/checklist.html" class="btn btn-primary">Voir ma checklist</a>
                     </div>
                 </div>
             </div>
@@ -214,7 +216,8 @@
             <div class="container">
                 <div class="interview-header">
                     <h2>Prépare-toi aux entretiens</h2>
-                    <p>Entraîne-toi avec des questions fréquentes adaptées à ton profil <span id="profileSubTitle">Frontend</span></p>
+                    <p>Entraîne-toi avec des questions fréquentes adaptées à ton profil <span
+                            id="profileSubTitle">Frontend</span></p>
                 </div>
 
                 <div class="interview-scene">
@@ -228,7 +231,10 @@
 
                         <div class="bubble bubble-answer">
                             <p><strong>Toi :</strong></p>
-                            <p id="answerText">J'ai développé une application complète de gestion de tâches en React avec Redux pour l'état global, React Router pour la navigation, et une API REST en Node.js avec Express. J'ai aussi ajouté l'authentification JWT et des tests avec Jest.</p>
+                            <p id="answerText">J'ai développé une application complète de gestion de tâches en React
+                                avec Redux pour l'état global, React Router pour la navigation, et une API REST en
+                                Node.js avec Express. J'ai aussi ajouté l'authentification JWT et des tests avec Jest.
+                            </p>
                         </div>
 
                     </div>
@@ -239,7 +245,8 @@
 
                 <div class="interview-controls">
                     <button class="btn btn-secondary" id="prevQuestion">← Question précédente</button>
-                    <span id="questionCounter">Question <span id="progressQuestionCount">0</span> / <span id="totalQuestionCount">20</span></span>
+                    <span id="questionCounter">Question <span id="progressQuestionCount">0</span> / <span
+                            id="totalQuestionCount">20</span></span>
                     <button class="btn btn-primary" id="nextQuestion">Question suivante →</button>
                 </div>
                 <div class="interview-finished" id="interviewFinished">

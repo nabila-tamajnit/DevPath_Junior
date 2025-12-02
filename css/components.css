@@ -99,7 +99,7 @@
 }
 
 .burger-btn.active .burger-line:nth-child(1) {
-    transform: rotate(45deg) translateY(7px);
+    transform: rotate(45deg) translateY(9.5px);
 }
 
 .burger-btn.active .burger-line:nth-child(2) {
@@ -107,7 +107,7 @@
 }
 
 .burger-btn.active .burger-line:nth-child(3) {
-    transform: rotate(-45deg) translateY(-7px);
+    transform: rotate(-45deg) translateY(-9.5px);
 }
 
 /* --- MENU DE NAVIGATION --- */
@@ -163,7 +163,19 @@
     color: white;
 }
 
-/*  >>->>- RESPONSIVE --<<-<< */
+/*  ------ RESPONSIVE GRAND ECRAN ------- */
+
+@media (min-width: 1200px) {
+    .navbar .container {
+        max-width: 1500px;
+    }
+    
+    .nav-links {
+        gap: 70px;
+    }
+}
+
+/*  ------ RESPONSIVE MOBILE ------- */
 
 @media (max-width: 768px) {
     .burger-btn {
@@ -228,8 +240,8 @@
 
 .profile-dropdown {
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: -140%;
+    left: 25%;
     margin-top: var(--space-xs);
     background-color: var(--bg-white);
     border-radius: var(--radius-sm);

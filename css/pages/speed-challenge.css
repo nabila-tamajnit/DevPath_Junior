@@ -1,6 +1,6 @@
 .speed-challenge-page {
     min-height: 100vh;
-    padding: var(--space-lg) 0;
+    padding-top: var(--space-xl);
     background-color: var(--bg-light);
 }
 

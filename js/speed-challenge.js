@@ -6,6 +6,8 @@
 let allCards = [];
 let currentIndex = 0;
 let totalQuestions = 0;
+let maxSeconds = 20;
+let seconds = maxSeconds;
 
 // ----- Éléments HTML ------
 const profileTitle = document.getElementById('profileTitle');
@@ -28,4 +30,29 @@ const totalQuestionsEl = document.getElementById('totalQuestions');
 // Message fin
 const challengeFinished = document.getElementById('challengeFinished');
 const restartBtn = document.getElementById('restartChallenge');
+
+
+
+//* =============================================
+//* CHARGER LES CARTES DEPUIS LE JSON
+//* =============================================
+
+
+
+
+
+
+
+//Todo timer
+//const MAX_SECONDS = 20
+//let seconds = MAX_SECONDS;
+// créer une variable pour stocker le timer 
+// let timer
+// Lancer le timer chaque fois que l'utilisateur arrive sur la question
+// timer = setInterval(() => { 
+    // seconds--
+    // (00:)XX
+// seconds.toString().padStart(2, '0')
+//  }, 1000)
+// clearInterval(timer) quand joueur répond ou temps écoulé
 
