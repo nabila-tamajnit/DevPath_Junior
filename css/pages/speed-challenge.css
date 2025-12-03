@@ -1,6 +1,6 @@
 .speed-challenge-page {
     min-height: 100vh;
-    padding-top: var(--space-xl);
+    padding: var(--space-xl);
     background-color: var(--bg-light);
 }
 
@@ -68,4 +68,296 @@
     color: var(--text-dark);
     font-weight: 500;
     text-align: left;
+}
+
+/* ============================================
+   ZONE DE JEU
+   ============================================ */
+
+.challenge-game {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+/* ============================================
+   TIMER
+   ============================================ */
+
+.timer-circle {
+    width: 80px;
+    height: 80px;
+    background-color: var(--bg-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid var(--color-primary);
+}
+
+.timer-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* États du timer */
+.timer-circle.warning {
+    border-color: #F59E0B;
+}
+
+.timer-circle.warning .timer-number {
+    color: #F59E0B;
+}
+
+.timer-circle.danger {
+    border-color: #EF4444;
+    animation: pulse 0.5s infinite;
+}
+
+.timer-circle.danger .timer-number {
+    color: #EF4444;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* ============================================
+   CARTE QUESTION
+   ============================================ */
+
+.question-card {
+    width: 100%;
+    background-color: var(--bg-white);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.question-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-gray);
+    margin-bottom: var(--space-xs);
+}
+
+.question-term {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+/* ============================================
+   LISTE DES RÉPONSES
+   ============================================ */
+
+.answers-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.answer-btn {
+    width: 100%;
+    background-color: var(--bg-white);
+    border: 2px solid var(--bg-gray);
+    border-radius: var(--radius-sm);
+    padding: var(--space-md);
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    font-weight: 500;
+}
+
+.answer-btn:hover {
+    border-color: var(--color-primary);
+    background-color: var(--bg-light);
+    transform: translateX(4px);
+}
+
+/* Bonne réponse */
+.answer-btn.correct {
+    border-color: #10B981;
+    background-color: #D1FAE5;
+}
+
+/* Mauvaise réponse */
+.answer-btn.incorrect {
+    border-color: #EF4444;
+    background-color: #FEE2E2;
+}
+
+/* Désactivé */
+.answer-btn.disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* ============================================
+   PROGRESSION + COMPTEUR
+   ============================================ */
+
+.game-progress {
+    width: 100%;
+    text-align: center;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: var(--bg-gray);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: var(--space-xs);
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.progress-count {
+    font-size: 0.875rem;
+    color: var(--text-gray);
+    font-weight: 600;
+    margin: 0;
+}
+
+/* ============================================
+   MESSAGE DE FIN
+   ============================================ */
+
+.challenge-finished {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: var(--space-xl);
+    background-color: var(--bg-white);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.challenge-finished h2 {
+    font-size: 2rem;
+    margin-bottom: var(--space-sm);
+    color: var(--text-dark);
+}
+
+.challenge-finished > p {
+    font-size: 1rem;
+    color: var(--text-gray);
+    margin-bottom: var(--space-lg);
+}
+
+.score-results {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-lg);
+}
+
+.score-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-md);
+    background-color: var(--bg-light);
+    border-radius: var(--radius-sm);
+    min-width: 120px;
+}
+
+.score-label {
+    font-size: 0.75rem;
+    color: var(--text-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: var(--space-xs);
+}
+
+.score-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.finished-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .speed-challenge-page {
+        padding: var(--space-md) 0;
+    }
+
+    /* Écran de démarrage */
+    .challenge-start {
+        padding: 0 var(--space-md);
+    }
+    
+    .start-card {
+        padding: var(--space-lg);
+    }
+
+    .challenge-start h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Jeu */
+    .challenge-game {
+        gap: var(--space-sm);
+    }
+
+    .timer-circle {
+        width: 70px;
+        height: 70px;
+    }
+
+    .timer-number {
+        font-size: 1.75rem;
+    }
+
+    .question-term {
+        font-size: 1.5rem;
+    }
+
+    .answer-btn {
+        font-size: 0.875rem;
+    }
+
+    /* Fin */
+    .score-results {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+
+    .finished-buttons {
+        flex-direction: column;
+    }
+
+    .finished-buttons .btn {
+        width: 100%;
+    }
 }
