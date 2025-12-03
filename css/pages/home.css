@@ -434,7 +434,7 @@ body.dark .hero {
    ============================================ */
 
 /* Grand écran */
-@media (min-width: 1200px) {
+@media (min-width: 1600px) {
 
     .hero .container,
     .readme-preview .container,
