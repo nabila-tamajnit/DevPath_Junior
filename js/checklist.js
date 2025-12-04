@@ -233,7 +233,7 @@ function toggleTask(taskId) {
     calculateProgress();
 }
 
-
+//! \/\/\/\/\/\/\/ EXPLICATION PRÉSENTATION \/\/\/\/\/\/\/\/\/
 //* =============================================
 //* SAUVEGARDER DANS LOCALSTORAGE
 //* =============================================
@@ -248,7 +248,7 @@ function saveData() {
 
     console.log('Données sauvegardées !');
 }
-
+//! /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
 
 //* =============================================
 //* SAUVEGARDER LA VALEUR D'UN INPUT
@@ -271,7 +271,7 @@ function saveInputValue(taskId, value) {
     saveData();
 }
 
-
+//! \/\/\/\/\/\/\/ EXPLICATION PRÉSENTATION \/\/\/\/\/\/\/\/\/
 //* =============================================
 //* CHARGER LES DONNÉES SAUVEGARDÉES
 //* =============================================
@@ -312,7 +312,7 @@ function loadSavedData() {
         });
     });
 }
-
+//! /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
 
 //* =============================================
 //* CALCULER LA PROGRESSION
