@@ -21,7 +21,7 @@ section {
 }
 
 body.dark .hero {
-    background: url(../../images/hero-bg\(8\).svg) no-repeat, #2f3547;
+    background: url(../../images/hero-bg-sombre.svg) no-repeat, #2f3547;
 }
 
 .timeline,
