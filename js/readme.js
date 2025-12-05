@@ -105,7 +105,7 @@ function collectFormData() {
     const styleRadios = document.querySelectorAll('input[name="readmeStyle"]');
 
     // Pour chaque radio, on prend la valeur de celui coché
-    styleRadios.forEach(function (radio) {
+    styleRadios.forEach( (radio) => {
         if (radio.checked) {
             data.style = radio.value;
         }
@@ -202,7 +202,7 @@ function generateProfessionalStyle(data) {
             md += `### Languages\n`;
 
             // pour chaque élément
-            data.progLanguages.forEach(function(progLang) {
+            data.progLanguages.forEach( (progLang) => {
                 md += `- ${progLang}\n`;
             });
 
@@ -212,7 +212,7 @@ function generateProfessionalStyle(data) {
         if (data.frameworks.length > 0 && data.frameworks[0] !== '') {
             md += `### Frameworks & Librairies\n`;
 
-            data.frameworks.forEach(function(fw) {
+            data.frameworks.forEach( (fw) => {
                 md += `- ${fw}\n`;
             });
 
@@ -222,7 +222,7 @@ function generateProfessionalStyle(data) {
         if (data.tools.length > 0 && data.tools[0] !== '') {
             md += `### Outils & Technologies\n`;
 
-            data.tools.forEach(function(tool) {
+            data.tools.forEach( (tool) => {
                 md += `- ${tool}\n`;
             });
 
@@ -239,7 +239,7 @@ function generateProfessionalStyle(data) {
     if (data.spokLanguages.length > 0 && data.spokLanguages[0] !== '') {
         md += `## 🌍 Langues\n\n`;
 
-        data.spokLanguages.forEach(function(spokLang) {
+        data.spokLanguages.forEach( (spokLang) => {
             md += `- ${spokLang}\n`;
         });
 
@@ -250,7 +250,7 @@ function generateProfessionalStyle(data) {
     if (data.projets.length > 0) {
         md += `## 🚀 Projets\n\n`;
 
-        data.projets.forEach(function(project) {
+        data.projets.forEach( (project) => {
             md += `### ${project.name}\n\n`;
             md += `${project.desc}\n\n`;
 
@@ -349,7 +349,7 @@ function generateCreativeStyle(data) {
             md += `**Langages :** `;
 
             // pour chaque élément
-            data.progLanguages.forEach(function(progLang) {
+            data.progLanguages.forEach( (progLang) => {
                 md += `\`${progLang}\` `;
             });
 
@@ -359,7 +359,7 @@ function generateCreativeStyle(data) {
         if (data.frameworks.length > 0 && data.frameworks[0] !== '') {
             md += `**Frameworks:** `;
 
-            data.frameworks.forEach(function(fw) {
+            data.frameworks.forEach( (fw) => {
                 md += `\`${fw}\` `;
             });
 
@@ -369,7 +369,7 @@ function generateCreativeStyle(data) {
         if (data.tools.length > 0 && data.tools[0] !== '') {
             md += `**Outils:** `;
 
-            data.tools.forEach(function(tool) {
+            data.tools.forEach( (tool) => {
                 md += `\`${tool}\` `;
             });
 
@@ -386,7 +386,7 @@ function generateCreativeStyle(data) {
     if (data.spokLanguages.length > 0 && data.spokLanguages[0] !== '') {
         md += `## 🗣️ Langues\n\n`;
 
-        data.spokLanguages.forEach(function(spokLang) {
+        data.spokLanguages.forEach( (spokLang) => {
             md += `🌐 ${spokLang}  `;
         });
 
@@ -397,7 +397,7 @@ function generateCreativeStyle(data) {
     if (data.projets.length > 0) {
         md += `## 🎨 Mes créations\n\n`;
 
-        data.projets.forEach(function(project, index) {
+        data.projets.forEach( (project, index) => {
             md += `### ${index + 1}. ${project.name} 🚀\n\n`;
             md += `${project.desc}\n\n`;
 
@@ -513,7 +513,7 @@ function generateMinimalistStyle(data) {
     if (data.projets.length > 0) {
         md += `**Projects:**\n\n`;
 
-        data.projets.forEach(function(project) {
+        data.projets.forEach( (project) => {
             md += `- **${project.name}**: ${project.desc}`;
 
             if (project.link) {
@@ -662,7 +662,7 @@ copyButton.addEventListener('click', function() {
 const styleRadios = document.querySelectorAll('input[name="readmeStyle"]');
 
 // Aux changements sur chaque radio
-styleRadios.forEach(function(radio) {
+styleRadios.forEach( (radio) => {
     radio.addEventListener('change', function() {
         console.log('Style changé :', radio.value);
 

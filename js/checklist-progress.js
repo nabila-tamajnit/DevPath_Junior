@@ -60,8 +60,8 @@ function updateProgressDisplay(checklistData) {
     let completed = 0;
     
     // Compter les tâches
-    checklistData.categories.forEach(function(category) {
-        category.tasks.forEach(function(task) {
+    checklistData.categories.forEach( (category) => {
+        category.tasks.forEach( (task) => {
             total++;
             if (task.completed) {
                 completed++;

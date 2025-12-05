@@ -67,7 +67,7 @@ function displayChecklist() {
     checklistContainer.textContent = '';
 
     // Pour chaque catégorie
-    checklistData.categories.forEach(function (category) {
+    checklistData.categories.forEach( (category) => {
 
         // Créer la div de la catégorie
         const categoryDiv = document.createElement('div');
@@ -82,7 +82,7 @@ function displayChecklist() {
 
 
         // Pour chaque tâche de cette catégorie
-        category.tasks.forEach(function (task) {
+        category.tasks.forEach( (task) => {
 
             // Créer la tâche
             const taskDiv = createTaskElement(task);
@@ -202,9 +202,9 @@ function toggleTask(taskId) {
     console.log('Inverser la tâche :', taskId);
 
     // Parcourir toutes les catégories et tâches
-    checklistData.categories.forEach(function (category) {
+    checklistData.categories.forEach( (category) => {
 
-        category.tasks.forEach(function (task) {
+        category.tasks.forEach( (task) => {
 
             // Si c'est la bonne tâche
             if (task.id === taskId) {
@@ -258,8 +258,8 @@ function saveInputValue(taskId, value) {
     console.log('Input sauvegardé :', taskId, value);
 
     // Trouver la tâche et mettre à jour sa valeur
-    checklistData.categories.forEach(function (category) {
-        category.tasks.forEach(function (task) {
+    checklistData.categories.forEach( (category) => {
+        category.tasks.forEach( (task) => {
 
             if (task.id === taskId) {
                 task.value = value;
@@ -293,8 +293,8 @@ function loadSavedData() {
     const savedData = JSON.parse(savedDataString);
 
     // Fusionner : garder les tâches du JSON, mais récupérer les sauvegardes
-    checklistData.categories.forEach(function (category, catIndex) {
-        category.tasks.forEach(function (task, taskIndex) {
+    checklistData.categories.forEach( (category, catIndex) => {
+        category.tasks.forEach( (task, taskIndex) => {
 
             // Trouver la même tâche dans les données sauvegardées
             const savedTask = savedData.categories[catIndex].tasks[taskIndex];
@@ -324,8 +324,8 @@ function calculateProgress() {
     let completed = 0;  // de tâches complétées
 
     // Compter toutes les tâches
-    checklistData.categories.forEach(function (category) {
-        category.tasks.forEach(function (task) {
+    checklistData.categories.forEach( (category) => {
+        category.tasks.forEach( (task) => {
 
             total++;
 

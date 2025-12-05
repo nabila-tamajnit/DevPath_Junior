@@ -15,7 +15,7 @@ if (burgerBtn && navMenu) {
 
     const navLinks = navMenu.querySelectorAll('a');
 
-    navLinks.forEach(function(link) {
+    navLinks.forEach( (link) => {
 
         link.addEventListener('click', function() {
 
@@ -112,7 +112,7 @@ changeButton.addEventListener('click', function() {
 // Récupérer tous les boutons du menu
 const profileOptions = document.querySelectorAll('.profile-option');
 
-profileOptions.forEach(function(button) {
+profileOptions.forEach( (button) => {
     
     button.addEventListener('click', function() {
         

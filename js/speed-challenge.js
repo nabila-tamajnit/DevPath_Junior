@@ -159,7 +159,7 @@ function generateAnswers(correctCard) {
     
     // TROUVER 2 AUTRES CARTES POUR FAUSSES RÉPONSES
     // filter() = garder seulement les cartes avec un ID différent
-    const otherCards = allCards.filter(function(card) {
+    const otherCards = allCards.filter( (card) => {
         return card.id !== correctCard.id;
     });
     
@@ -218,7 +218,7 @@ function displayAnswers(answers) {
     answersList.innerHTML = '';
     
     // Pour chaque réponse
-    answers.forEach(function(answer) {
+    answers.forEach( (answer) => {
         // Créer un button
         const button = document.createElement('button');
         button.className = 'answer-btn';
@@ -261,7 +261,7 @@ function handleAnswer(clickedButton) {
         
         // Et montrer la bonne réponse en vert
         const allButtons = answersList.querySelectorAll('.answer-btn');
-        allButtons.forEach(function(btn) {
+        allButtons.forEach( (btn) => {
             if (btn.dataset.correct === 'true') {
                 btn.classList.add('correct');
             }
@@ -270,7 +270,7 @@ function handleAnswer(clickedButton) {
     
     // Désactiver les boutons
     const allButtons = answersList.querySelectorAll('.answer-btn');
-    allButtons.forEach(function(btn) {
+    allButtons.forEach( (btn) => {
         btn.classList.add('disabled');
         btn.style.pointerEvents = 'none';
     });
@@ -340,7 +340,7 @@ function handleTimeout() {
     
     // Montrer la bonne réponse en vert
     const allButtons = answersList.querySelectorAll('.answer-btn');
-    allButtons.forEach(function(btn) {
+    allButtons.forEach( (btn) => {
         if (btn.dataset.correct === 'true') {
             btn.classList.add('correct');
         }

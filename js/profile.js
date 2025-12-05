@@ -3,7 +3,7 @@ const buttons = document.querySelectorAll('.btn');
 console.log('Nombre de boutons trouvés :', buttons.length);
 
 // Pour chaque boutton
-buttons.forEach( function(button) {
+buttons.forEach( (button) => {
 
     // Au click
     button.addEventListener('click', function() {
