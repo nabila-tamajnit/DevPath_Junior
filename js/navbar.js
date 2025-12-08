@@ -7,7 +7,7 @@ const navMenu = document.getElementById('navMenu');
 
 if (burgerBtn && navMenu) {
 
-    burgerBtn.addEventListener('click', function() {
+    burgerBtn.addEventListener('click', () => {
 
         burgerBtn.classList.toggle('active');
         navMenu.classList.toggle('active');
@@ -15,9 +15,9 @@ if (burgerBtn && navMenu) {
 
     const navLinks = navMenu.querySelectorAll('a');
 
-    navLinks.forEach( (link) => {
+    navLinks.forEach((link) => {
 
-        link.addEventListener('click', function() {
+        link.addEventListener('click', () => {
 
             burgerBtn.classList.remove('active');
             navMenu.classList.remove('active');
@@ -99,7 +99,7 @@ console.log('Menu créé');
 
 // ============== OUVRIR LE MENU ==============
 
-changeButton.addEventListener('click', function() {
+changeButton.addEventListener('click', () => {
 
     // Ouvrir le menu avec la classe active
     dropdown.classList.toggle('active');
@@ -112,17 +112,17 @@ changeButton.addEventListener('click', function() {
 // Récupérer tous les boutons du menu
 const profileOptions = document.querySelectorAll('.profile-option');
 
-profileOptions.forEach( (button) => {
-    
-    button.addEventListener('click', function() {
-        
+profileOptions.forEach((button) => {
+
+    button.addEventListener('click', () => {
+
         // Récupérer le texte du bouton cliqué comme minuscule sur localstorage
         const newProfileLabel = button.textContent;
         console.log('Nouveau profil choisi :', newProfileLabel);
-        
+
         // Mettre tout en minuscules pour localStorage sinon fonctionne pas
         let newProfile = '';
-        
+
         if (newProfileLabel === 'Frontend') {
             newProfile = 'frontend';
         }
@@ -132,20 +132,64 @@ profileOptions.forEach( (button) => {
         else if (newProfileLabel === 'Fullstack') {
             newProfile = 'fullstack';
         }
-        
+
         // Sauvegarder dans localStorage
         localStorage.setItem('userProfile', newProfile);
-        
+
         // Affichager dans la navbar
         profileName.textContent = newProfileLabel;
-        
+
         // Fermer le menu plus de classe active
         dropdown.classList.remove('active');
         console.log('Profil changé !');
-        
+
         // Recharger la page pour tout mettre à jour
         window.location.reload();
     });
 });
+
+
+//* =============================================
+//* MODE SOMBRE
+//* =============================================
+
+const darkModeToggle = document.getElementById('darkModeToggle');
+const body = document.body;
+
+
+function loadDarkMode() {
+
+    const darkModeEnabled = localStorage.getItem('darkMode');
+    console.log('Préférence de mode :', darkModeEnabled);
+
+    if (darkModeEnabled === 'enabled') {
+        body.classList.add('dark-mode');
+
+    }
+
+    if (darkModeToggle) {
+        darkModeToggle.setAttribute('aria-label', 'Désactiver le mode sombre');
+    }
+}
+
+
+darkModeToggle.addEventListener('click', () => {
+
+    body.classList.toggle('dark-mode');
+
+    if (body.classList.contains('dark-mode')) {
+
+        localStorage.setItem('darkMode', 'Enabled');
+
+    }
+    else {
+
+        localStorage.setItem('darkMode', 'disabled')
+    }
+
+})
+
+loadDarkMode();
+
 
 // Ajouter mode sombre : au click sur sombre, ajouter la class dark a body, puis faire toutes les modifications en css, pour les hero dans l'index, vaut mieux mettre non repeat pour l'image bg et aussi chager la couleur de l'image bg

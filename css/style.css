@@ -16,34 +16,49 @@ html {
     /* Couleurs principales */
     --color-primary: #3B5FC6;
     --color-secondary: #8B5CF6;
-    
+
     /* Couleurs de fond */
     --bg-white: #FFFFFF;
     --bg-light: #F9FAFB;
     --bg-gray: #F3F4F6;
-    
+
     /* Couleurs de texte */
     --text-dark: #1F2937;
     --text-gray: #6B7280;
     --text-light: #9CA3AF;
-    
+
     /* Espacements */
     --space-xs: 8px;
     --space-sm: 16px;
     --space-md: 24px;
     --space-lg: 32px;
     --space-xl: 48px;
-    
+
     /* Arrondis des coins */
     --radius-sm: 8px;
     --radius-md: 16px;
     --radius-lg: 24px;
+
+    .dark-mode {
+        --color-primary: #3B5FC6;
+        --color-secondary: #8B5CF6;
+
+        /* Couleurs de fond */
+        --bg-white: #1F2937;
+        --bg-light: #2f3547;
+        --bg-gray: #9CA3AF;
+
+        /* Couleurs de texte */
+        --text-dark: #FFFFFF;
+        --text-gray: #F9FAFB;
+        --text-light: #F3F4F6;
+    }
 }
 
 /* ============================================
     TYPOGRAPHIE
    ============================================ */
-   
+
 body {
     font-family: 'Inter', -apple-system, sans-serif;
     font-size: 16px;
@@ -53,7 +68,9 @@ body {
 }
 
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-weight: 700;
     line-height: 1.2;
     color: var(--text-dark);

@@ -20,7 +20,7 @@ section {
 
 }
 
-body.dark .hero {
+body.dark-mode .hero {
     background: url(../../images/hero-bg-sombre.svg) no-repeat, #2f3547;
 }
 
@@ -322,6 +322,10 @@ body.dark .hero {
     text-align: left;
 }
 
+.dark-mode .bubble-question {
+    background-color: #151c25;
+}
+
 .bubble-question::after {
     content: '';
     position: absolute;
@@ -334,9 +338,19 @@ body.dark .hero {
     border-top: 15px solid #EEF2FF;
 }
 
+.dark-mode .bubble-question::after {
+    border-top: 15px solid #151c25;
+}
+
+
+
 .bubble-answer {
     background-color: #F0FDF4;
     text-align: left;
+}
+
+.dark-mode .bubble-answer {
+    background-color: #2f3547;
 }
 
 .bubble-answer::after {
@@ -349,6 +363,10 @@ body.dark .hero {
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
     border-top: 15px solid #F0FDF4;
+}
+
+.dark-mode .bubble-answer::after {
+    border-top: 15px solid #2f3547;
 }
 
 .bubble p {
