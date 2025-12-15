@@ -91,6 +91,11 @@ if (currentProfile !== 'fullstack') {
     dropdown.appendChild(btnFullstack);
 }
 
+const btnProfile = document.createElement('button');
+btnProfile.className = 'profile-return';
+btnProfile.textContent = 'Profils';
+dropdown.appendChild(btnProfile);
+
 // Mettre le menu dans le badge
 profileBadge.appendChild(dropdown);
 
@@ -145,8 +150,16 @@ profileOptions.forEach((button) => {
 
         // Recharger la page pour tout mettre à jour
         window.location.reload();
+
+        
     });
 });
+
+// const profileReturn = document.querySelectorAll('.profile-return');
+
+// profileReturn.addEventListener('click', () => {
+//             window.location.href = "profile-choice.html";
+// })
 
 
 //* =============================================
