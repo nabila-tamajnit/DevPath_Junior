@@ -364,6 +364,10 @@
     padding: var(--space-lg) 0;
 }
 
+body.dark-mode .footer {
+    background-color: var(--bg-white);
+}
+
 .footer-content {
     text-align: center;
 }
@@ -379,6 +383,10 @@
 .footer-links a {
     color: var(--bg-light);
     font-size: 0.875rem;
+}
+
+body.dark-mode .footer-links a {
+    color: white;
 }
 
 .footer-links a:hover {

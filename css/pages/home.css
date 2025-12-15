@@ -22,6 +22,9 @@ section {
 
 body.dark-mode .hero {
     background: url(../../images/hero-bg-sombre.svg) no-repeat, #2f3547;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .timeline,
@@ -350,7 +353,7 @@ body.dark-mode .hero {
 }
 
 .dark-mode .bubble-answer {
-    background-color: #2f3547;
+    background-color: #242a3d;
 }
 
 .bubble-answer::after {
@@ -366,7 +369,7 @@ body.dark-mode .hero {
 }
 
 .dark-mode .bubble-answer::after {
-    border-top: 15px solid #2f3547;
+    border-top: 15px solid #242a3d;
 }
 
 .bubble p {
@@ -466,6 +469,11 @@ body.dark-mode .hero {
 
     .hero {
         background-image: url(../../images/hero-bg_mobile\(2\).svg);
+    }
+
+    body.dark-mode .hero {
+        background-image: url(../../images/hero-bg_mobile_dark.svg);
+        background-position: center;
     }
 
     /* Sections */

@@ -153,41 +153,65 @@ profileOptions.forEach((button) => {
 //* MODE SOMBRE
 //* =============================================
 
-const darkModeToggle = document.getElementById('darkModeToggle');
 const body = document.body;
 
+const darkModeToggle = document.getElementById('darkModeToggle')
+
+console.log('Checkbox trouvée :', darkModeToggle);
+
+
+// ============== CHARGER L'ÉTAT AU DÉMARRAGE ==============
 
 function loadDarkMode() {
-
     const darkModeEnabled = localStorage.getItem('darkMode');
-    console.log('Préférence de mode :', darkModeEnabled);
+    console.log('État du mode sombre :', darkModeEnabled);
 
     if (darkModeEnabled === 'enabled') {
+        // Activer le mode sombre
         body.classList.add('dark-mode');
-
-    }
-
-    if (darkModeToggle) {
-        darkModeToggle.setAttribute('aria-label', 'Désactiver le mode sombre');
+        
+        // Cocher la checkbox
+        if (darkModeToggle) {
+            darkModeToggle.checked = true;
+        }
+        
+        console.log('Mode sombre activé');
+    } else {
+        // Mode clair
+        body.classList.remove('dark-mode');
+        
+        // Décocher la checkbox
+        if (darkModeToggle) {
+            darkModeToggle.checked = false;
+        }
+        
+        console.log('Mode clair activé');
     }
 }
 
 
-darkModeToggle.addEventListener('click', () => {
+// ============== BASCULER LE MODE ==============
 
-    body.classList.toggle('dark-mode');
+if (darkModeToggle) {
+    darkModeToggle.addEventListener('change', () => {
+        console.log('Toggle cliqué');
+        
+        // Basculer le mode
+        body.classList.toggle('dark-mode');
 
-    if (body.classList.contains('dark-mode')) {
+        // Sauvegarder l'état
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('darkMode', 'enabled');
+            console.log('Mode sombre enregistré');
+        } else {
+            localStorage.setItem('darkMode', 'disabled');
+            console.log('Mode clair enregistré');
+        }
+    });
+}
 
-        localStorage.setItem('darkMode', 'Enabled');
 
-    }
-    else {
-
-        localStorage.setItem('darkMode', 'disabled')
-    }
-
-})
+// ============== LANCER AU CHARGEMENT ==============
 
 loadDarkMode();
 

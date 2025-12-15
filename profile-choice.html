@@ -1,64 +1,69 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Choisis ton profil - DevPath Junior</title>
-    
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/pages/profile.css">
 
+    <script defer src="js/dark-mode.js"></script>
     <script defer src="js/profile.js"></script>
-    <script defer src="js/navbar.js"></script>
 
 </head>
+
 <body>
-    <header>
+    <header class="profile-choice-header">
         <div class="checkbox-wrapper-17">
-                    <input type="checkbox" id="switch-17" /><label for="switch-17"></label>
-                    <span class="text-mode">Mode sombre</span>
-                </div>
+            <input type="checkbox" id="darkModeToggle" /><label for="darkModeToggle"></label>
+            <span class="text-mode">Mode sombre</span>
+        </div>
     </header>
-    
+
     <main class="profile-page">
-        
+
         <div class="container">
-            
+
             <div class="profile-header">
                 <h1>Bienvenue sur <span class="logo-text">DevPath <span class="logo-accent">Junior</span></span></h1>
                 <p>Choisis ton parcours pour personnaliser ton expérience</p>
             </div>
-            
+
             <div class="profile-cards">
-                
+
                 <!-- Frontend -->
                 <div class="profile-card">
                     <h2>Frontend</h2>
-                    <p>Tu crées des interfaces utilisateur et tu maîtrises l'expérience visuelle ? Prépare-toi aux entretiens Frontend</p>
+                    <p>Tu crées des interfaces utilisateur et tu maîtrises l'expérience visuelle ? Prépare-toi aux
+                        entretiens Frontend</p>
                     <button class="btn btn-primary" data-profile="frontend">Choisir Frontend</button>
                 </div>
-                
+
                 <!-- Backend -->
                 <div class="profile-card">
                     <h2>Backend</h2>
-                    <p>Tu travailles sur les serveurs, bases de données et la logique métier ? Prépare-toi aux entretiens Backend</p>
+                    <p>Tu travailles sur les serveurs, bases de données et la logique métier ? Prépare-toi aux
+                        entretiens Backend</p>
                     <button class="btn btn-primary" data-profile="backend">Choisir Backend</button>
                 </div>
-                
+
                 <!-- Fullstack -->
                 <div class="profile-card">
                     <h2>Fullstack</h2>
                     <p>Tu maîtrises à la fois le frontend et le backend ? Prépare-toi aux entretiens Fullstack</p>
                     <button class="btn btn-primary" data-profile="fullstack">Choisir Fullstack</button>
                 </div>
-                
+
             </div>
-            
+
             <p class="profile-note">Tu pourras changer ton profil à tout moment</p>
-            
+
         </div>
     </main>
-    
+
 </body>
+
 </html>

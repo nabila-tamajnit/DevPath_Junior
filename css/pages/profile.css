@@ -1,7 +1,14 @@
-
 /* ============================================
    PAGE PRINCIPALE
    ============================================ */
+.profile-choice-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: var(--space-md) var(--space-lg);
+    z-index: 100;
+    background-color: transparent;
+}
 
 .profile-page {
     min-height: 100vh;
@@ -11,10 +18,12 @@
     background-color: var(--bg-light);
 }
 
+
+
 /* ============================================
    EN-TÊTE
    ============================================ */
-   
+
 .profile-header {
     text-align: center;
     margin-bottom: var(--space-xl);
@@ -44,7 +53,7 @@
 /* ============================================
    CARTE DE PROFIL
    ============================================ */
-   
+
 .profile-card {
     background-color: var(--bg-white);
     border-radius: var(--radius-lg);
@@ -55,7 +64,7 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 350px;
-    
+
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -84,7 +93,7 @@
 /* ============================================
    NOTE EN BAS
    ============================================ */
-   
+
 .profile-note {
     text-align: center;
     font-size: 0.875rem;
@@ -95,15 +104,24 @@
 /* ============================================
    RESPONSIVE
    ============================================ */
-   
+
 @media (max-width: 768px) {
+
+    .profile-choice-header {
+        padding: var(--space-sm) var(--space-md);
+    }
+
+    .profile-choice-header .text-mode {
+        display: none;
+    }
+
     .profile-cards {
         grid-template-columns: 1fr;
         max-width: 400px;
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     .profile-header h1 {
         font-size: 1.5rem;
     }

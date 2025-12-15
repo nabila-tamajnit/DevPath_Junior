@@ -202,6 +202,11 @@
     background-color: #FEE2E2;
 }
 
+body.dark-mode .answer-btn.correct,
+body.dark-mode .answer-btn.incorrect {
+    color: var(--bg-light);
+}
+
 /* Désactivé */
 .answer-btn.disabled {
     cursor: not-allowed;
