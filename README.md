@@ -80,7 +80,7 @@ Le site est entièrement responsive et s'adapte à tous les types d'écrans.
 
 ---
 
-## 👤 Auteure
+## 👤 Auteur
 
 **Nabila Tamajnit**
 - GitHub: [@nabila-tamajnit](https://github.com/nabila-tamajnit)
