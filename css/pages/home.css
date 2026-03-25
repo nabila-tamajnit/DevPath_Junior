@@ -10,7 +10,7 @@ section {
 }
 
 .hero {
-    background: url(../../images/hero-bg\(8\).svg), white;
+    background: url(../../images/hero-bg.svg), white;
     /* background: linear-gradient(135deg, var(--bg-light) 0%, #EEF2FF 100%);
     background-image: url(../../images/hero-bg\(8\).svg); */
     background-size: cover;
@@ -468,11 +468,11 @@ body.dark-mode .hero {
 @media (max-width: 768px) {
 
     .hero {
-        background-image: url(../../images/hero-bg_mobile\(2\).svg);
+        background-image: url(../../images/hero-bg-mobile.svg);
     }
 
     body.dark-mode .hero {
-        background-image: url(../../images/hero-bg_mobile_dark.svg);
+        background-image: url(../../images/hero-bg-mobile-dark.svg);
         background-position: center;
     }
 

@@ -10,8 +10,7 @@ let generatedMarkdown = '';
 
 console.log('Variables initiales');
 
-// Je vais d'abord créer toutes les fontions que j'ai besoin, puis créer les évenements
-//! >>>>>>>>>>>>>>> LES FONCTIONS <<<<<<<<<<<<<<<<<<<
+//* >>>>>>>>>>>>>>> LES FONCTIONS <<<<<<<<<<<<<<<<<<<
 
 //* =============================================
 //* FONCTION : RÉCUPÉRER LES DONNÉES DU FORMULAIRE
@@ -19,10 +18,8 @@ console.log('Variables initiales');
 function collectFormData() {
     console.log('Collecte des données du formulaire...');
 
-    // Objet des infos (vide pour l'instant)
     const data = {};
 
-    // Remplir l'objet
     //? >>>----- INFORMATIONS DE BASE -----<<<
     data.name = document.getElementById('userName').value;
     data.title = document.getElementById('userTitle').value;
@@ -38,9 +35,8 @@ function collectFormData() {
     data.searshing = document.getElementById('userSearching').value;
 
     //? >>>----- COMPÉTENCES TECHNIQUES -----<<<
-    // Récupérer le text
+    // Récupérer le texte
     const progLanguagesText = document.getElementById('userProgrammingLanguages').value;
-    // Raccourci if (?) Si rempli, transformer en tableau avec .split + raccourci fonction (.map) enlever les espaces avec .trim de chaque élément du tableau + raccourci else (:) si pas rempli tableau vide
     data.progLanguages = progLanguagesText ? progLanguagesText.split(',').map(progLang => progLang.trim()) : [];
 
     const frameworksText = document.getElementById('userFrameworks').value;
@@ -60,7 +56,6 @@ function collectFormData() {
     // créer un tableau pour 3 projets
     data.projets = [];
 
-    // Prendre les données
     const project1Name = document.getElementById('project1Name').value;
 
     // S'il a un nom, l'ajouter en objet
@@ -122,10 +117,8 @@ function collectFormData() {
 function generateMarkdown(data) {
     console.log('Générer du markdown avec le style :', data.style);
 
-    // Variable vide
     let markdown = '';
 
-    // Pour celui coché, ajouter la fonction du style
     if (data.style === 'professionnel') {
         markdown = generateProfessionalStyle(data);
     }
@@ -574,8 +567,6 @@ function displayPreview(markdown){
 
     // Scroll automatique vers la preview
     readmePreview.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    // comportement: smooth (fluide)
-    // bloc: start (aligné au debut de la fenêtre)
 
     console.log('Preview affichée !');
 }
@@ -599,9 +590,8 @@ function copyMarkdown() {
     .then(function() {
         console.log('Markdown copié !');
 
-        // Changer temporairement le texte du bouton pour confirmer
         const originalText = copyButton.textContent;
-        copyButton.textContent = `✅ Copié !`;
+        copyButton.textContent = `✓ Copié !`;
 
         // Remettre le texte d'origine après 2 secondes
         setTimeout(function() {
@@ -616,7 +606,7 @@ function copyMarkdown() {
 }
 
 
-//! >>>>>>>>>>>>>>> LES ÉVÉNEMENTS <<<<<<<<<<<<<<<<<
+//* >>>>>>>>>>>>>>> LES ÉVÉNEMENTS <<<<<<<<<<<<<<<<<
 
 //* =============================================
 //* ÉVÉNEMENT : CLIC SUR "GÉNÉRER MON README"
@@ -625,7 +615,6 @@ function copyMarkdown() {
 generateButton.addEventListener('click', function(){
     console.log('Bouton "Générer" cliqué');
 
-    // Récupérer les données du formulaire
     const userData = collectFormData();
 
     // Si pas au moins le nom, pas de readme
@@ -637,7 +626,6 @@ generateButton.addEventListener('click', function(){
     // Générer le markdown du le style choisi
     generatedMarkdown = generateMarkdown(userData);
 
-    // Afficher la preview avec la fonction que j'ai créer, qui reprend la fonction pour genéré avec le style choisi
     displayPreview(generatedMarkdown);
 
     console.log('README généré avec succès !');
@@ -650,7 +638,6 @@ generateButton.addEventListener('click', function(){
 copyButton.addEventListener('click', function() {
     console.log('Bouton "Copier" cliqué');
 
-    // On appelle la fonction:
     copyMarkdown();
 })
 
@@ -661,7 +648,6 @@ copyButton.addEventListener('click', function() {
 // On récupère tous les radio buttons de style
 const styleRadios = document.querySelectorAll('input[name="readmeStyle"]');
 
-// Aux changements sur chaque radio
 styleRadios.forEach( (radio) => {
     radio.addEventListener('change', function() {
         console.log('Style changé :', radio.value);

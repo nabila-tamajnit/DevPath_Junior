@@ -25,30 +25,23 @@ console.log('Variables initialisées');
 function loadChecklist() {
     console.log('Chargement de la checklist...');
 
-    // Télécharger le fichier JSON
     fetch('../data/checklist.json')
 
-        // Quand le fichier est chargé, le transformer en objet JS
         .then(function (response) {
             console.log('Fichier chargé !');
             return response.json();
         })
 
-        // Utiliser les données
         .then(function (data) {
             console.log('Données reçues :', data);
 
-            // Stocker les données dans la variable globale
             checklistData = data;
 
-            // Charger les données sauvegardées
             loadSavedData();
 
-            // Afficher la checklist
             displayChecklist();
         })
 
-        // En cas d'erreur
         .catch(function (error) {
             console.error('Erreur de chargement :', error);
             checklistContainer.textContent = 'Erreur de chargement.';
@@ -63,17 +56,13 @@ function loadChecklist() {
 function displayChecklist() {
     console.log('Affichage de la checklist');
 
-    // Vider le container avant de le remplir
     checklistContainer.textContent = '';
 
-    // Pour chaque catégorie
     checklistData.categories.forEach( (category) => {
 
-        // Créer la div de la catégorie
         const categoryDiv = document.createElement('div');
         categoryDiv.className = 'category';
 
-        // Créer le titre de la catégorie
         const categoryTitle = document.createElement('h2');
         categoryTitle.className = 'category-title';
         categoryTitle.textContent = category.name;
@@ -81,20 +70,16 @@ function displayChecklist() {
         categoryDiv.appendChild(categoryTitle);
 
 
-        // Pour chaque tâche de cette catégorie
         category.tasks.forEach( (task) => {
 
-            // Créer la tâche
             const taskDiv = createTaskElement(task);
 
             categoryDiv.appendChild(taskDiv);
         });
 
-        // Ajouter dans le container principal
         checklistContainer.appendChild(categoryDiv);
     });
 
-    // Calculer la progression après l'affichage
     calculateProgress();
 }
 
@@ -105,12 +90,10 @@ function displayChecklist() {
 
 function createTaskElement(task) {
 
-    // Créer la div principale de la tâche
     const taskDiv = document.createElement('div');
     taskDiv.className = 'task';
     taskDiv.id = task.id;
 
-    // Si la tâche est déjà complétée, ajouter la classe CSS
     if (task.completed) {
         taskDiv.classList.add('completed');
     }
@@ -131,7 +114,6 @@ function createTaskElement(task) {
         label.className = 'task-label';
         label.textContent = task.text;
 
-        // Ajouter checkbox + label dans la div
         taskDiv.append(checkbox, label);
     }
 
@@ -201,21 +183,16 @@ function createTaskElement(task) {
 function toggleTask(taskId) {
     console.log('Inverser la tâche :', taskId);
 
-    // Parcourir toutes les catégories et tâches
     checklistData.categories.forEach( (category) => {
 
         category.tasks.forEach( (task) => {
 
-            // Si c'est la bonne tâche
             if (task.id === taskId) {
 
-                // Inverser l'état
                 task.completed = !task.completed;
 
-                // Trouver la div
                 const taskDiv = document.getElementById(taskId);
 
-                // Ajouter ou enlever la classe
                 if (task.completed) {
                     taskDiv.classList.add('completed');
                 }
@@ -226,14 +203,12 @@ function toggleTask(taskId) {
         });
     });
 
-    // Sauvegarder dans localStorage
     saveData();
 
     // Recalculer la progression
     calculateProgress();
 }
 
-//! \/\/\/\/\/\/\/ EXPLICATION PRÉSENTATION \/\/\/\/\/\/\/\/\/
 //* =============================================
 //* SAUVEGARDER DANS LOCALSTORAGE
 //* =============================================
@@ -248,7 +223,6 @@ function saveData() {
 
     console.log('Données sauvegardées !');
 }
-//! /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
 
 //* =============================================
 //* SAUVEGARDER LA VALEUR D'UN INPUT
@@ -271,7 +245,6 @@ function saveInputValue(taskId, value) {
     saveData();
 }
 
-//! \/\/\/\/\/\/\/ EXPLICATION PRÉSENTATION \/\/\/\/\/\/\/\/\/
 //* =============================================
 //* CHARGER LES DONNÉES SAUVEGARDÉES
 //* =============================================
@@ -281,7 +254,6 @@ function loadSavedData() {
     // Récupérer le texte depuis localStorage
     const savedDataString = localStorage.getItem('checklistData');
 
-    // Si rien n'est sauvegardé, arrêter
     if (!savedDataString) {
         console.log('Pas de données sauvegardées');
         return;
@@ -312,7 +284,6 @@ function loadSavedData() {
         });
     });
 }
-//! /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
 
 //* =============================================
 //* CALCULER LA PROGRESSION
@@ -320,10 +291,9 @@ function loadSavedData() {
 
 function calculateProgress() {
 
-    let total = 0;  // total de tâches
-    let completed = 0;  // de tâches complétées
+    let total = 0;
+    let completed = 0;
 
-    // Compter toutes les tâches
     checklistData.categories.forEach( (category) => {
         category.tasks.forEach( (task) => {
 
@@ -340,7 +310,7 @@ function calculateProgress() {
 
     if (total > 0) {
         percentage = (completed / total) * 100;
-        percentage = Math.round(percentage); // Arrondir
+        percentage = Math.round(percentage);
     }
 
     console.log('Progression : ' + completed + '/' + total + ' = ' + percentage + '%');

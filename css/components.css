@@ -330,7 +330,7 @@
 }
 
 /* Options du menu */
-.profile-option {
+.profile-option, .profile-return {
     display: block;
     width: 100%;
     padding: var(--space-sm) var(--space-md);

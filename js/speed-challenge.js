@@ -95,7 +95,6 @@ function startGame() {
     // Cacher l'écran de démarrage
     challengeStart.style.display = 'none';
 
-    // Afficher le jeu
     challengeGame.style.display = 'flex';
 
     // Afficher la première question
@@ -148,17 +147,15 @@ function displayQuestion() {
 function generateAnswers(correctCard) {
     console.log('Génération des réponses...');
     
-    // Tableau vide pour stocker les 3 réponses
     const answers = [];
     
     // AJOUTER LA BONNE RÉPONSE
     answers.push({
-        text: correctCard.definition, // La vraie définition
-        isCorrect: true // Marquer comme correcte
+        text: correctCard.definition,
+        isCorrect: true
     });
     
     // TROUVER 2 AUTRES CARTES POUR FAUSSES RÉPONSES
-    // filter() = garder seulement les cartes avec un ID différent
     const otherCards = allCards.filter( (card) => {
         return card.id !== correctCard.id;
     });
@@ -188,7 +185,6 @@ function generateAnswers(correctCard) {
 //* =============================================
 //* MÉLANGER UN TABLEAU
 //* =============================================
-// Algorithme de Fisher-Yates : mélange vraiment aléatoire
 
 function shuffleArray(array) {
     // Créer une copie pour ne pas modifier l'original
@@ -217,7 +213,6 @@ function displayAnswers(answers) {
     // Vider la liste
     answersList.innerHTML = '';
     
-    // Pour chaque réponse
     answers.forEach( (answer) => {
         // Créer un button
         const button = document.createElement('button');
@@ -253,11 +248,11 @@ function handleAnswer(clickedButton) {
     
     if (isCorrect) {
         console.log('Bonne réponse !');
-        clickedButton.classList.add('correct'); // vert
+        clickedButton.classList.add('correct');
         score++;
     } else {
         console.log('Mauvaise réponse');
-        clickedButton.classList.add('incorrect'); // rouge
+        clickedButton.classList.add('incorrect');
         
         // Et montrer la bonne réponse en vert
         const allButtons = answersList.querySelectorAll('.answer-btn');
@@ -275,9 +270,9 @@ function handleAnswer(clickedButton) {
         btn.style.pointerEvents = 'none';
     });
     
-    // Passer à la question suivante après 1.5 sec
+    // Passer à la question suivante
     setTimeout(function() {
-        currentIndex++; // Passer à la suivante
+        currentIndex++;
         displayQuestion(); // Afficher la nouvelle question
     }, 1500);
 }
@@ -293,31 +288,30 @@ function startTimer() {
     // Réinitialiser
     seconds = MAX_SECONDS;
     
-    // Enlever les couleurs sinon reste au relancement
     timerCircle.classList.remove('warning', 'danger');
     
     // Lancer le compte à rebours
     timer = setInterval(() => {
-        seconds--; // Enlever 1 sec
+        seconds--;
         
         timerText.textContent = seconds.toString().padStart(2, '0');
         
-        // Changer la couleur selon le temps restant
+        // Changer la couleur
         if (seconds <= 5) {
-            timerCircle.classList.add('danger');   // Rouge
+            timerCircle.classList.add('danger');
             timerCircle.classList.remove('warning');
         } else if (seconds <= 10) {
-            timerCircle.classList.add('warning');  // Orange
+            timerCircle.classList.add('warning');
             timerCircle.classList.remove('danger');
         }
         
-        // Si le temps est écoulé
+        // temps écoulé
         if (seconds <= 0) {
             console.log('Temps écoulé !');
             stopTimer();
             handleTimeout();
         }
-    }, 1000); // Répéter toutes les 1sec
+    }, 1000);
 }
 
 
@@ -326,7 +320,7 @@ function startTimer() {
 //* =============================================
 
 function stopTimer() {
-    clearInterval(timer); // Arrêter le setInterval
+    clearInterval(timer);
     console.log('Timer arrêté');
 }
 
@@ -338,7 +332,6 @@ function stopTimer() {
 function handleTimeout() {
     console.log('Passage automatique à la suivante');
     
-    // Montrer la bonne réponse en vert
     const allButtons = answersList.querySelectorAll('.answer-btn');
     allButtons.forEach( (btn) => {
         if (btn.dataset.correct === 'true') {
@@ -348,7 +341,7 @@ function handleTimeout() {
         btn.style.pointerEvents = 'none';
     });
     
-    // Passer à la question suivante après 1.5 sec
+    // Passer à la question suivante
     setTimeout(function() {
         currentIndex++;
         displayQuestion();
@@ -361,10 +354,9 @@ function handleTimeout() {
 //* =============================================
 
 function updateProgress() {
-    // Mettre à jour le compteur
+
     currentQuestionEl.textContent = currentIndex + 1;
     
-    // Calculer le pourcentage
     const percentage = ((currentIndex + 1) / totalQuestions) * 100;
     progressFill.style.width = percentage + '%';
     
@@ -379,20 +371,15 @@ function updateProgress() {
 function showResults() {
     console.log('Affichage des résultats');
     
-    // Cacher le jeu
     challengeGame.style.display = 'none';
     
-    // Afficher les résultats
     challengeFinished.style.display = 'block';
     
-    // Calculer le pourcentage
     const percentage = Math.round((score / totalQuestions) * 100);
     
-    // Afficher le score
     document.getElementById('finalScore').textContent = score + ' / ' + totalQuestions;
     document.getElementById('percentage').textContent = percentage + '%';
     
-    // Message personnalisé selon le score
     let title = '';
     let message = '';
     
@@ -409,11 +396,10 @@ function showResults() {
         title = '💪 Pas mal !';
         message = 'Encore quelques révisions !';
     } else {
-        title = '📚 Continue !';
+        title = 'Continue !';
         message = 'Revois les flashcards et réessaye !';
     }
     
-    // Afficher le titre et le message
     document.getElementById('finishedTitle').textContent = title;
     document.getElementById('finishedMessage').textContent = message;
     
@@ -432,10 +418,8 @@ function restartChallenge() {
     currentIndex = 0;
     score = 0;
     
-    // Cacher les résultats
     challengeFinished.style.display = 'none';
     
-    // Afficher l'écran de démarrage
     challengeStart.style.display = 'block';
 }
 
@@ -462,19 +446,3 @@ if (restartBtn) {
 //* =============================================
 
 loadChallengeData();
-
-
-
-//Todo timer
-//const MAX_SECONDS = 20
-//let seconds = MAX_SECONDS;
-// créer une variable pour stocker le timer 
-// let timer
-// Lancer le timer chaque fois que l'utilisateur arrive sur la question
-// timer = setInterval(() => { 
-    // seconds--
-    // (00:)XX
-// seconds.toString().padStart(2, '0')
-//  }, 1000)
-// clearInterval(timer) quand joueur répond ou temps écoulé
-

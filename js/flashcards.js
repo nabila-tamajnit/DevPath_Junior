@@ -2,7 +2,6 @@
 //* VARIABLES GLOBALES
 //* =============================================
 
-// ------ Éléments qui évolues -----
 let deck = []; // tableau cartes
 let currentIndex = 0; // Index carte actuelle
 let totalReviewed = 0; // cartes révisées
@@ -149,7 +148,6 @@ function updateStats() {
 function flipCard() {
     console.log('Flip de la carte');
 
-    // Ajouter la classe "flipped"
     cardInner.classList.toggle('flipped');
 }
 
@@ -161,13 +159,10 @@ function flipCard() {
 function knowCard() {
     console.log('Carte connue, on la retire du deck');
 
-    // Retirer la carte du deck
     deck.splice(currentIndex, 1);
 
-    // Augmenter le compteur de cartes révisées
     knowCount++;
 
-    // Si on était sur la dernière carte, revenir à l'index 0
     if (currentIndex >= deck.length && deck.length > 0) {
         currentIndex = 0;
     }
@@ -175,9 +170,8 @@ function knowCard() {
     // Retourner la carte avant d'afficher la suivante
     cardInner.classList.remove('flipped');
 
-    // mettre a jour les stats
     updateStats();
-    // Afficher la carte suivante avec petit délai pour l'animation
+
     setTimeout(function () {
         displayCard();
     }, 300);
@@ -194,27 +188,21 @@ function reviewCard() {
     // Prendre la carte actuelle
     const currentCard = deck[currentIndex];
 
-    // La retirer du deck
     deck.splice(currentIndex, 1);
 
-    // La remettre à la fin
     deck.push(currentCard);
 
-    // Augmenter le compteur "À revoir"
     reviewCount++;
     console.log('compteur review augmenté :', reviewCount)
 
-    // Si on était sur la dernière carte, revenir à l'index 0
     if (currentIndex >= deck.length && deck.length > 0) {
         currentIndex = 0;
     }
 
-    // Retourner la carte avant d'afficher la suivante
     cardInner.classList.remove('flipped');
 
-    // mettre a jour les stats
     updateStats();
-    // Afficher la carte suivante avec délai pour l'animation
+
     setTimeout(function () {
         displayCard();
     }, 300);
@@ -228,13 +216,10 @@ function reviewCard() {
 function showCompletion() {
     console.log('Toutes les cartes sont révisées !');
 
-    // Cacher la carte
     flashcard.style.display = 'none';
 
-    // Afficher le message de félicitations
     completionMessage.style.display = 'block';
 
-    // Afficher le nombre de cartes révisées
     if (reviewedCountElement) {
         reviewedCountElement.textContent = totalCards;
     }
@@ -261,7 +246,6 @@ function restartGame() {
 if (flashcard) {
     flashcard.addEventListener('click', function (event) {
 
-        // Ne pas retourner si on clique sur un bouton
         if (event.target.tagName === 'BUTTON') {
             return;
         }

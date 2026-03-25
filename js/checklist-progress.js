@@ -6,7 +6,6 @@
 // Charge les données et affiche la progression
 function displayChecklistProgress() {
     
-    // Vérifier qu'on est bien sur la page d'accueil
     const progressElement = document.getElementById('progressPercentage');
     
     if (!progressElement) {
@@ -14,7 +13,6 @@ function displayChecklistProgress() {
         return;
     }
     
-    // Essayer de charger les données sauvegardées
     const savedDataString = localStorage.getItem('checklistData');
     
     if (!savedDataString) {
@@ -23,7 +21,6 @@ function displayChecklistProgress() {
         return;
     }
     
-    // Il y a des données sauvegardées, les utiliser
     const checklistData = JSON.parse(savedDataString);
     updateProgressDisplay(checklistData);
 }
@@ -59,7 +56,6 @@ function updateProgressDisplay(checklistData) {
     let total = 0;
     let completed = 0;
     
-    // Compter les tâches
     checklistData.categories.forEach( (category) => {
         category.tasks.forEach( (task) => {
             total++;
@@ -69,14 +65,12 @@ function updateProgressDisplay(checklistData) {
         });
     });
     
-    // Calculer le pourcentage
     let percentage = 0;
     
     if (total > 0) {
         percentage = Math.round((completed / total) * 100);
     }
     
-    // Mettre à jour l'affichage
     const progressElement = document.getElementById('progressPercentage');
     
     if (progressElement) {
