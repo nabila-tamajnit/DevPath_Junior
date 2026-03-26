@@ -33,6 +33,7 @@ html {
     --space-md: 24px;
     --space-lg: 32px;
     --space-xl: 48px;
+    --space-xxl: 88px;
 
     /* Arrondis des coins */
     --radius-sm: 8px;

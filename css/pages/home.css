@@ -479,6 +479,10 @@ body.dark-mode .hero {
     /* Sections */
     section {
         min-height: auto;
+        padding: var(--space-xxl) 0;
+    }
+
+    section:first-child {
         padding: var(--space-lg) 0;
     }
 
