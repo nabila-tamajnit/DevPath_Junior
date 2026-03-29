@@ -12,19 +12,9 @@
 ---
 
 ## ✨ Fonctionnalités
-
-### To-Do List des étapes
-Liste interactive pour suivre sa progression dans la préparation aux entretiens.
-
-### Générateur de README
-Outil pour créer rapidement des README professionnels pour son profil GitHub.
-
-### Jeux d'entraînement
-- **Speed Challenge QCM** : Questions techniques en mode chrono pour tester ses connaissances
-- **Memory Cards** : Jeu de cartes pour mémoriser les définitions techniques
-
-### Simulateur d'entretien
-Simulation d'entretien avec des conseils de réponses adaptés aux questions courantes.
+- **Simulateur d'entretien** : Questions courantes et conseils de réponses.
+- **Jeux d'entraînement** : QCM Chrono & Memory Cards pour mémoriser les concepts.
+- **Outils Pratiques** : To-Do List de progression et générateur de README GitHub.
 
 ---
 
