@@ -1,4 +1,5 @@
 # 🎯 DevPath Junior
+<img width="1511" height="760" alt="devpath" src="https://github.com/user-attachments/assets/7a13080c-12e0-4de0-aa4e-395b45b1f165" />
 
 > Plateforme interactive de préparation aux entretiens pour développeurs juniors.
 
